@@ -284,7 +284,7 @@ include 'includes/header.php';
                 <div class="col-lg-4">
                     <div class="success-card">
                         <div class="success-image">
-                            <img src="images/testimonial-1.webp" alt="Sarah Johnson">
+                            <img src="images/testimonial-abstract-1.webp" alt="Sarah Johnson">
                         </div>
                         <div class="success-content">
                             <h4>Sarah Johnson</h4>
@@ -300,7 +300,7 @@ include 'includes/header.php';
                 <div class="col-lg-4">
                     <div class="success-card">
                         <div class="success-image">
-                            <img src="images/testimonial-2.webp" alt="Mike Chen">
+                            <img src="images/testimonial-abstract-2.webp" alt="Mike Chen">
                         </div>
                         <div class="success-content">
                             <h4>Mike Chen</h4>
@@ -316,7 +316,7 @@ include 'includes/header.php';
                 <div class="col-lg-4">
                     <div class="success-card">
                         <div class="success-image">
-                            <img src="images/testimonial-3.webp" alt="Emily Rodriguez">
+                            <img src="images/testimonial-abstract-3.webp" alt="Emily Rodriguez">
                         </div>
                         <div class="success-content">
                             <h4>Emily Rodriguez</h4>

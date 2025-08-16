@@ -194,6 +194,10 @@ class LoadingScreen {
         
         this.isLoaded = true;
         this.loadingScreen.classList.add('hidden');
+        // Notify other components that loading has finished
+        try {
+            document.dispatchEvent(new CustomEvent('skytronic:loadingHidden'));
+        } catch (e) {}
         
         // Remove from DOM after animation
         setTimeout(() => {
@@ -212,6 +216,8 @@ class Header {
         this.navbar = document.querySelector('.navbar');
         this.navToggler = document.querySelector('.navbar-toggler');
         this.navMenu = document.querySelector('.navbar-nav');
+        this.collapseEl = document.getElementById('navbarNav');
+        this.collapse = this.collapseEl && typeof bootstrap !== 'undefined' ? new bootstrap.Collapse(this.collapseEl, { toggle: false }) : null;
         this.navLinks = document.querySelectorAll('.nav-link');
         this.dropdowns = document.querySelectorAll('.dropdown');
         this.lastScrollY = 0;
@@ -251,17 +257,49 @@ class Header {
     }
 
     setupMobileMenu() {
-        if (!this.navToggler || !this.navMenu) return;
+        if (!this.navToggler) return;
 
-        this.navToggler.addEventListener('click', () => {
-            this.toggleMobileMenu();
+        // If Bootstrap Collapse is present, let it handle toggling via data attributes
+        if (!this.collapse) {
+            this.navToggler.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.toggleMobileMenu();
+            });
+        }
+
+        // Sync state with Bootstrap collapse if available
+        if (this.collapseEl) {
+            this.collapseEl.addEventListener('shown.bs.collapse', () => {
+                this.isMenuOpen = true;
+                this.navToggler.classList.add('active');
+                this.navToggler.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            });
+            this.collapseEl.addEventListener('hidden.bs.collapse', () => {
+                this.isMenuOpen = false;
+                this.navToggler.classList.remove('active');
+                this.navToggler.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Close menu when clicking nav links (but not dropdown toggles)
+        this.navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const isDropdownToggle = link.classList.contains('dropdown-toggle') || link.getAttribute('data-bs-toggle') === 'dropdown';
+                if (isDropdownToggle) return;
+                if (this.isMenuOpen) {
+                    this.closeMobileMenu();
+                }
+            });
         });
 
-        // Close menu when clicking nav links
-        this.navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+        // Close on dropdown item click inside mobile menu
+        const dropdownItems = document.querySelectorAll('#navbarNav .dropdown-menu .dropdown-item');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', () => {
                 if (this.isMenuOpen) {
-                    this.toggleMobileMenu();
+                    this.closeMobileMenu();
                 }
             });
         });
@@ -269,18 +307,36 @@ class Header {
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (this.isMenuOpen && !this.navbar.contains(e.target)) {
-                this.toggleMobileMenu();
+                this.closeMobileMenu();
             }
         });
     }
 
     toggleMobileMenu() {
         this.isMenuOpen = !this.isMenuOpen;
-        this.navMenu.classList.toggle('active');
         this.navToggler.classList.toggle('active');
-        
+        this.navToggler.setAttribute('aria-expanded', this.isMenuOpen ? 'true' : 'false');
+        // Fallback for when Bootstrap's Collapse isn't available
+        if (this.navMenu) {
+            this.navMenu.classList.toggle('active');
+        }
         // Prevent body scroll when menu is open
         document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
+    }
+
+    closeMobileMenu() {
+        if (this.collapse) {
+            this.collapse.hide();
+            return;
+        }
+        // Fallback explicit close
+        this.isMenuOpen = false;
+        this.navToggler.classList.remove('active');
+        if (this.navMenu) {
+            this.navMenu.classList.remove('active');
+        }
+        this.navToggler.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
     }
 
     setupDropdowns() {
@@ -576,7 +632,7 @@ class Animations {
 
     setupPageAnimations() {
         // Page load animations
-        this.timeline = gsap.timeline();
+        this.timeline = gsap.timeline({ paused: true });
         
         // Animate hero content
         this.timeline
@@ -608,14 +664,31 @@ class Animations {
             }, '-=0.1');
 
         // Animate floating cards
-        gsap.from('.floating-card', {
-            duration: config.animations.duration.slow,
-            y: 100,
-            opacity: 0,
-            stagger: 0.2,
-            ease: config.animations.ease.elastic,
-            delay: 0.5
-        });
+        const playFloating = () => {
+            gsap.from('.floating-card', {
+                duration: config.animations.duration.slow,
+                y: 100,
+                opacity: 0,
+                stagger: 0.2,
+                ease: config.animations.ease.elastic,
+                delay: 0.5
+            });
+        };
+
+        const startAnimations = () => {
+            if (this.timeline && this.timeline.paused()) {
+                this.timeline.play(0);
+            }
+            playFloating();
+        };
+
+        if (document.readyState === 'complete') {
+            startAnimations();
+        } else {
+            window.addEventListener('load', startAnimations, { once: true });
+            document.addEventListener('skytronic:loadingHidden', startAnimations, { once: true });
+        }
+        
     }
 
     setupScrollAnimations() {
@@ -718,16 +791,37 @@ class Animations {
 
     setupCounterAnimations() {
         // Animate number counters
-        const counters = document.querySelectorAll('.stat-number');
-        counters.forEach(counter => {
-            const st = ScrollTrigger.create({
-                trigger: counter,
-                start: 'top 80%',
-                onEnter: () => this.animateCounter(counter)
+        if (typeof ScrollTrigger === 'undefined') return;
+
+        const bindCounters = () => {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                // prevent duplicate bindings
+                if (counter.dataset.counterBound === 'true') return;
+                counter.dataset.counterBound = 'true';
+
+                const st = ScrollTrigger.create({
+                    trigger: counter,
+                    start: 'top 80%',
+                    onEnter: () => {
+                        if (counter.dataset.animated === 'true') return;
+                        this.animateCounter(counter);
+                        counter.dataset.animated = 'true';
+                    }
+                });
+                this.scrollTriggers.push(st);
             });
-            
-            this.scrollTriggers.push(st);
-        });
+        };
+
+        // Defer binding until the loading screen is hidden to avoid animating under overlay
+        const hasLoading = !!document.getElementById('loading-screen');
+        if (hasLoading) {
+            document.addEventListener('skytronic:loadingHidden', bindCounters, { once: true });
+        } else if (document.readyState === 'complete') {
+            bindCounters();
+        } else {
+            window.addEventListener('load', bindCounters, { once: true });
+        }
     }
 
     animateSection(section) {
@@ -743,19 +837,75 @@ class Animations {
     }
 
     animateCounter(counter) {
-        const target = counter.textContent;
-        const number = parseInt(target.replace(/[^\d]/g, ''));
-        const prefix = target.replace(/[\d]/g, '');
-        
-        if (isNaN(number)) return;
+        const original = counter.textContent.trim();
+        const match = original.match(/^(\D*)([\d,.\s\/]+)(\D*)$/);
+        if (!match) return;
 
-        gsap.from(counter, {
+        const prefix = match[1] || '';
+        const numericPart = match[2].trim();
+        const suffix = match[3] || '';
+
+        const parseNumber = (value) => {
+            const cleaned = value.replace(/\s+/g, '').replace(/,/g, '');
+            return parseFloat(cleaned);
+        };
+
+        const hasFraction = numericPart.includes('/');
+        if (hasFraction) {
+            const [leftRaw, rightRaw] = numericPart.split('/').map(s => s.trim());
+            const numeratorTarget = parseNumber(leftRaw);
+            const denominator = parseInt(rightRaw.replace(/\D/g, ''), 10) || 1;
+            if (isNaN(numeratorTarget)) return;
+
+            const decimals = (leftRaw.includes('.') ? (leftRaw.split('.')[1]?.length || 0) : 0);
+            const state = { val: 0 };
+            if (counter._anim && typeof counter._anim.kill === 'function') {
+                counter._anim.kill();
+            }
+            counter._anim = gsap.to(state, {
+                duration: config.animations.duration.slow,
+                val: numeratorTarget,
+                ease: config.animations.ease.smooth,
+                onUpdate: function() {
+                    const current = state.val || 0;
+                    const value = decimals > 0 ? current.toFixed(decimals) : Math.round(current).toString();
+                    counter.textContent = `${prefix}${value}/${denominator}${suffix}`;
+                },
+                onComplete: function() {
+                    counter.textContent = original;
+                }
+            });
+            return;
+        }
+
+        // Plain number with optional decimals
+        const targetValue = parseNumber(numericPart);
+        if (isNaN(targetValue)) return;
+        const decimals = numericPart.includes('.') ? (numericPart.split('.')[1]?.replace(/\D/g, '').length || 0) : 0;
+        const useGrouping = /[,\s]/.test(numericPart) && !numericPart.includes('.') && !/\/[\d]/.test(numericPart);
+
+        const state = { val: 0 };
+        if (counter._anim && typeof counter._anim.kill === 'function') {
+            counter._anim.kill();
+        }
+        counter._anim = gsap.to(state, {
             duration: config.animations.duration.slow,
-            textContent: 0,
-            roundProps: 'textContent',
+            val: targetValue,
             ease: config.animations.ease.smooth,
             onUpdate: function() {
-                counter.textContent = prefix + Math.ceil(this.targets()[0].textContent);
+                const current = state.val || 0;
+                let text;
+                if (decimals > 0) {
+                    text = Number(current).toFixed(decimals);
+                } else if (useGrouping) {
+                    text = Math.round(current).toLocaleString();
+                } else {
+                    text = Math.round(current).toString();
+                }
+                counter.textContent = `${prefix}${text}${suffix}`;
+            },
+            onComplete: function() {
+                counter.textContent = original;
             }
         });
     }
@@ -1498,7 +1648,7 @@ class PerformanceMonitor {
 // MAIN APP INITIALIZATION
 // =================================
 
-class SkyronicLabsApp {
+class SkytronicLabsApp {
     constructor() {
         this.components = {};
         this.isInitialized = false;
@@ -1561,7 +1711,7 @@ class SkyronicLabsApp {
 
         // Update mobile menu state
         if (Utils.getCurrentBreakpoint() !== 'mobile' && this.components.header.isMenuOpen) {
-            this.components.header.toggleMobileMenu();
+            this.components.header.closeMobileMenu();
         }
     }
 
@@ -1608,14 +1758,14 @@ if (document.readyState === 'loading') {
 }
 
 async function initializeApp() {
-    const app = new SkyronicLabsApp();
+    const app = new SkytronicLabsApp();
     await app.init();
     
     // Make app globally available for debugging
-    window.SkyronicLabsApp = app;
+    window.SkytronicLabsApp = app;
 }
 
 // Export for module systems
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { SkyronicLabsApp, Utils };
+    module.exports = { SkytronicLabsApp, Utils };
 }
