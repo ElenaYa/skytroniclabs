@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main>
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-bg-animation"></div>
         <div class="hero-clip-image"></div>
@@ -65,7 +64,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Labs Overview Section -->
     <section class="labs-overview py-5">
         <div class="container">
             <div class="row align-items-center g-4">
@@ -112,7 +110,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features-section py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -214,7 +211,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Popular Courses Section -->
     <section class="courses-preview py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -319,7 +315,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Success Stories Section -->
     <section class="success-stories py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -417,7 +412,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Learning Experience Section -->
     <section class="learning-experience py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -507,7 +501,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta-section py-5">
         <div class="container">
             <div class="row">

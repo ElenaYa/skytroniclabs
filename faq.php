@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- FAQ Hero Section -->
     <section class="faq-hero">
         <div class="container">
             <div class="row align-items-center">
@@ -29,7 +28,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- FAQ Categories -->
     <section class="faq-categories py-5">
         <div class="container">
             <div class="row">
@@ -72,7 +70,6 @@ include 'includes/header.php';
                 </div>
                 
                 <div class="col-lg-9">
-                    <!-- General Information -->
                     <div id="general" class="faq-section">
                         <h2 class="section-title">General Information</h2>
                         <div class="faq-accordion">
@@ -132,7 +129,6 @@ include 'includes/header.php';
                         </div>
                     </div>
 
-                    <!-- Courses & Curriculum -->
                     <div id="courses" class="faq-section">
                         <h2 class="section-title">Courses & Curriculum</h2>
                         <div class="faq-accordion">
@@ -324,7 +320,6 @@ include 'includes/header.php';
                         </div>
                     </div>
 
-                    <!-- Pricing & Payments -->
                     <div id="pricing" class="faq-section">
                         <h2 class="section-title">Pricing & Payments</h2>
                         <div class="faq-accordion">
@@ -491,7 +486,6 @@ include 'includes/header.php';
                         </div>
                     </div>
 
-                    <!-- Enrollment Process -->
                     <div id="enrollment" class="faq-section">
                         <h2 class="section-title">Enrollment Process</h2>
                         <div class="faq-accordion">
@@ -618,7 +612,6 @@ include 'includes/header.php';
                         </div>
                     </div>
 
-                    <!-- Technical Requirements -->
                     <div id="technical" class="faq-section">
                         <h2 class="section-title">Technical Requirements</h2>
                         <div class="faq-accordion">
@@ -741,7 +734,6 @@ include 'includes/header.php';
                         </div>
                     </div>
 
-                    <!-- Career Support -->
                     <div id="career" class="faq-section">
                         <h2 class="section-title">Career Support</h2>
                         <div id="job-support"></div>

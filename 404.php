@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- 404 Hero Section -->
     <section class="error-hero">
         <div class="container">
             <div class="row align-items-center min-vh-75">
@@ -80,10 +79,8 @@ include 'includes/header.php';
     </section>
 </main>
 
-<!-- Custom 404 Scripts -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current URL in error form
     const errorUrlInput = document.getElementById('errorUrl');
     const referrerUrlInput = document.getElementById('referrerUrl');
     
@@ -95,13 +92,11 @@ document.addEventListener('DOMContentLoaded', function() {
         referrerUrlInput.value = document.referrer;
     }
     
-    // Animate floating elements
     const floatingElements = document.querySelectorAll('.floating-elements .element');
     floatingElements.forEach((element, index) => {
         element.style.animationDelay = `${index * 0.5}s`;
     });
     
-    // Robot eye animation
     const robotEyes = document.querySelectorAll('.robot-eyes .eye');
     setInterval(() => {
         robotEyes.forEach(eye => {

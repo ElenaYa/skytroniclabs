@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- Hero Section -->
     <section class="about-hero">
         <div class="container">
             <div class="row align-items-center">
@@ -71,7 +70,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Mission & Vision Section -->
     <section class="mission-vision py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -152,7 +150,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Company Story Section -->
     <section class="company-story py-5">
         <div class="container">
             <div class="row">
@@ -247,7 +244,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Leadership Section -->
     <section class="leadership-team py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -390,7 +386,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Values & Culture Section -->
     <section class="values-culture py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -526,7 +521,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="about-cta py-5">
         <div class="container">
             <div class="row">

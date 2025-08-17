@@ -18,28 +18,21 @@
     
     <title><?php echo isset($TITLE) ? $TITLE : 'Skytronic Labs - Modern Tech Education Platform'; ?></title>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
     
-    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -67,7 +60,6 @@
     </script>
 </head>
 <body>
-    <!-- Cookie Consent Banner -->
     <div id="cookieConsent" class="cookie-consent">
         <div class="cookie-content">
             <div class="cookie-text">
@@ -81,7 +73,6 @@
         </div>
     </div>
 
-    <!-- Cookie Preferences Modal -->
     <div id="cookieModal" class="cookie-modal">
         <div class="cookie-modal-content">
             <div class="cookie-modal-header">
@@ -127,11 +118,9 @@
         </div>
     </div>
 
-    <!-- Navigation Header -->
     <header class="main-header">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <!-- Logo -->
                 <a class="navbar-brand" href="index.php">
                     <div class="logo">
                       
@@ -144,7 +133,6 @@
                     </div>
                 </a>
 
-                <!-- Mobile Menu Toggle -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
@@ -154,7 +142,6 @@
                     </span>
                 </button>
 
-                <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
@@ -221,7 +208,6 @@
                         </li>
                     </ul>
 
-                    <!-- CTA Button -->
                     <div class="navbar-cta">
                         <a href="courses.php" class="btn btn-primary">
                             <i class="fas fa-rocket"></i>
@@ -232,14 +218,11 @@
             </div>
         </nav>
 
-        <!-- Navigation Background Effect -->
         <div class="nav-bg-effect"></div>
         
-        <!-- Animated Bottom Line -->
         <div class="nav-bottom-line"></div>
     </header>
 
-    <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
             <div class="loading-logo">

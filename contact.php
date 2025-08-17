@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- Contact Hero Section -->
     <section class="contact-hero">
         <div class="container">
             <div class="row align-items-center">
@@ -43,7 +42,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Contact Options Section -->
     <section class="contact-options py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -192,7 +190,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Contact Forms Section -->
     <section id="consultation" class="contact-forms py-5">
         <div class="container">
             <div class="row">
@@ -201,7 +198,6 @@ include 'includes/header.php';
                         <h2 class="section-title">Send Us a Message</h2>
                         <p class="section-subtitle">Fill out the form below and we'll get back to you as soon as possible</p>
                         
-                        <!-- Main Contact Form -->
                         <form id="mainContactForm" class="contact-form">
                             <div class="form-step active" data-step="1">
                                 <h3>What can we help you with?</h3>
@@ -393,7 +389,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- FAQ Quick Access -->
     <section class="faq-quick-access py-5">
         <div class="container">
             <div class="row text-center mb-5">

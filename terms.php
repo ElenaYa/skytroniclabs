@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- Terms Hero -->
     <section class="legal-hero">
         <div class="container">
             <div class="row">
@@ -32,7 +31,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Terms Content -->
     <section class="terms-content py-5">
         <div class="container">
             <div class="row">
@@ -64,7 +62,6 @@ include 'includes/header.php';
                 
                 <div class="col-lg-9">
                     <div class="legal-content">
-                        <!-- Section 1: Agreement Overview -->
                         <section id="agreement" class="legal-section">
                             <h2>1. Agreement Overview</h2>
                             <div class="section-content">
@@ -128,7 +125,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 2: Account Terms -->
                         <section id="account" class="legal-section">
                             <h2>2. Account Terms and Eligibility</h2>
                             <div class="section-content">
@@ -224,7 +220,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 3: Service Description -->
                         <section id="services" class="legal-section">
                             <h2>3. Service Description and Availability</h2>
                             <div class="section-content">
@@ -322,7 +317,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 4: Payment Terms -->
                         <section id="payment" class="legal-section">
                             <h2>4. Payment Terms and Billing</h2>
                             <div class="section-content">
@@ -441,7 +435,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 5: User Conduct -->
                         <section id="conduct" class="legal-section">
                             <h2>5. User Conduct and Prohibited Activities</h2>
                             <div class="section-content">
@@ -564,9 +557,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Additional sections continue... -->
-                        
-                        <!-- Section 11: Governing Law -->
                         <section id="governing" class="legal-section">
                             <h2>11. Governing Law and Dispute Resolution</h2>
                             <div class="section-content">
@@ -605,7 +595,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 12: Changes to Terms -->
                         <section id="changes" class="legal-section">
                             <h2>12. Changes to These Terms</h2>
                             <div class="section-content">
@@ -668,7 +657,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Contact Section -->
                         <section class="legal-contact">
                             <h2>Questions About These Terms?</h2>
                             <div class="contact-options">

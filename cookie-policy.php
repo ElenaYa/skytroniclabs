@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- Cookie Policy Hero -->
     <section class="legal-hero">
         <div class="container">
             <div class="row">
@@ -31,7 +30,6 @@ include 'includes/header.php';
             </div>
         </div>
     </section>
-    <!-- Cookie Policy Content -->
     <section class="cookie-content py-5">
         <div class="container">
             <div class="row">
@@ -66,7 +64,6 @@ include 'includes/header.php';
                 
                 <div class="col-lg-9">
                     <div class="legal-content">
-                        <!-- What Are Cookies -->
                         <section id="what-are-cookies" class="legal-section">
                             <h2>What Are Cookies?</h2>
                             <div class="section-content">
@@ -163,7 +160,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Why We Use Cookies -->
                         <section id="why-we-use" class="legal-section">
                             <h2>Why We Use Cookies</h2>
                             <div class="section-content">
@@ -267,7 +263,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Types of Cookies -->
                         <section id="cookie-types" class="legal-section">
                             <h2>Types of Cookies We Use</h2>
                             <div class="section-content">
@@ -360,7 +355,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Essential Cookies -->
                         <section id="essential-cookies" class="legal-section">
                             <h2>Essential Cookies</h2>
                             <div class="section-content">
@@ -476,7 +470,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Analytics Cookies -->
                         <section id="analytics-cookies" class="legal-section">
                             <h2>Analytics and Performance Cookies</h2>
                             <div class="section-content">
@@ -599,7 +592,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Marketing Cookies -->
                         <section id="marketing-cookies" class="legal-section">
                             <h2>Marketing and Advertising Cookies</h2>
                             <div class="section-content">
@@ -748,7 +740,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Third-Party Cookies -->
                         <section id="third-party" class="legal-section">
                             <h2>Third-Party Cookies and Services</h2>
                             <div class="section-content">
@@ -852,7 +843,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Managing Cookies -->
                         <section id="manage-cookies" class="legal-section">
                             <h2>Managing Your Cookie Preferences</h2>
                             <div class="section-content">
@@ -999,7 +989,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Cookie Retention -->
                         <section id="cookie-retention" class="legal-section">
                             <h2>Cookie Retention and Expiration</h2>
                             <div class="section-content">
@@ -1102,7 +1091,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Policy Updates -->
                         <section id="updates" class="legal-section">
                             <h2>Policy Updates and Changes</h2>
                             <div class="section-content">
@@ -1197,7 +1185,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Contact Information -->
                         <section class="cookie-contact">
                             <h2>Questions About Our Cookie Policy?</h2>
                             <div class="contact-info">

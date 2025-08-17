@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- Disclaimer Hero -->
     <section class="legal-hero">
         <div class="container">
             <div class="row">
@@ -32,7 +31,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Disclaimer Content -->
     <section class="disclaimer-content py-5">
         <div class="container">
             <div class="row">
@@ -62,7 +60,6 @@ include 'includes/header.php';
                 
                 <div class="col-lg-9">
                     <div class="legal-content">
-                        <!-- General Disclaimer -->
                         <section id="general" class="legal-section">
                             <h2>General Disclaimer</h2>
                             <div class="section-content">
@@ -123,7 +120,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Educational Content Disclaimer -->
                         <section id="educational" class="legal-section">
                             <h2>Educational Content Disclaimer</h2>
                             <div class="section-content">
@@ -203,7 +199,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Career Outcomes Disclaimer -->
                         <section id="career" class="legal-section">
                             <h2>Career Outcomes and Employment Disclaimer</h2>
                             <div class="section-content">
@@ -302,7 +297,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Technical Information Disclaimer -->
                         <section id="technical" class="legal-section">
                             <h2>Technical Information and Code Disclaimer</h2>
                             <div class="section-content">
@@ -372,7 +366,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Third-Party Content Disclaimer -->
                         <section id="third-party" class="legal-section">
                             <h2>Third-Party Content and Services</h2>
                             <div class="section-content">
@@ -448,7 +441,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Warranties Disclaimer -->
                         <section id="warranties" class="legal-section">
                             <h2>Warranties and Representations</h2>
                             <div class="section-content">
@@ -514,7 +506,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Liability Limitations -->
                         <section id="liability" class="legal-section">
                             <h2>Limitation of Liability</h2>
                             <div class="section-content">
@@ -594,7 +585,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Professional Advice Disclaimer -->
                         <section id="professional" class="legal-section">
                             <h2>Professional Advice Disclaimer</h2>
                             <div class="section-content">
@@ -661,7 +651,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Updates and Changes -->
                         <section id="updates" class="legal-section">
                             <h2>Content Updates and Changes</h2>
                             <div class="section-content">
@@ -704,7 +693,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Jurisdiction -->
                         <section id="jurisdiction" class="legal-section">
                             <h2>Jurisdiction and Applicable Law</h2>
                             <div class="section-content">
@@ -737,7 +725,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Contact Information -->
                         <section class="disclaimer-contact">
                             <h2>Questions About This Disclaimer?</h2>
                             <div class="contact-info">

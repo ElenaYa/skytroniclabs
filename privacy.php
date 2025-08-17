@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- Privacy Policy Hero -->
     <section class="legal-hero">
         <div class="container">
             <div class="row">
@@ -32,7 +31,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Table of Contents -->
     <section class="toc-section py-5">
         <div class="container">
             <div class="row">
@@ -69,7 +67,6 @@ include 'includes/header.php';
                 
                 <div class="col-lg-9">
                     <div class="legal-content">
-                        <!-- Section 1: Overview -->
                         <section id="overview" class="legal-section">
                             <h2>1. Overview</h2>
                             <div class="section-content">
@@ -145,7 +142,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 2: Information Collection -->
                         <section id="information-collection" class="legal-section">
                             <h2>2. Information We Collect</h2>
                             <div class="section-content">
@@ -267,7 +263,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 3: How We Use Information -->
                         <section id="how-we-use" class="legal-section">
                             <h2>3. How We Use Your Information</h2>
                             <div class="section-content">
@@ -360,7 +355,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 4: Information Sharing -->
                         <section id="information-sharing" class="legal-section">
                             <h2>4. Information Sharing and Disclosure</h2>
                             <div class="section-content">
@@ -463,7 +457,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 5: Data Security -->
                         <section id="data-security" class="legal-section">
                             <h2>5. Data Security</h2>
                             <div class="section-content">
@@ -585,7 +578,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 6: Your Rights -->
                         <section id="your-rights" class="legal-section">
                             <h2>6. Your Privacy Rights</h2>
                             <div class="section-content">
@@ -736,7 +728,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 7: Cookies -->
                         <section id="cookies" class="legal-section">
                             <h2>7. Cookies and Tracking Technologies</h2>
                             <div class="section-content">
@@ -848,10 +839,7 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Remaining sections would continue here... -->
-                        <!-- For brevity, I'll include the key remaining sections -->
-
-                        <!-- Section 8: Data Retention -->
+                       
                         <section id="retention" class="legal-section">
                             <h2>8. Data Retention</h2>
                             <div class="section-content">
@@ -888,7 +876,6 @@ include 'includes/header.php';
                             </div>
                         </section>
 
-                        <!-- Section 12: Contact Information -->
                         <section id="contact" class="legal-section">
                             <h2>12. Contact Information</h2>
                             <div class="section-content">

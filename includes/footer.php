@@ -1,6 +1,4 @@
-<!-- Footer -->
 <footer class="main-footer">
-        <!-- Newsletter Section -->
         <section class="newsletter-section">
             <div class="container">
                 <div class="row align-items-center">
@@ -31,11 +29,9 @@
             </div>
         </section>
 
-        <!-- Main Footer Content -->
         <div class="footer-content">
             <div class="container">
                 <div class="row g-4">
-                    <!-- Company Info -->
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-section">
                             <div class="footer-logo">
@@ -64,7 +60,6 @@
                         </div>
                     </div>
 
-                    <!-- Quick Links -->
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-section">
                             <h4 class="footer-title">Quick Links</h4>
@@ -79,7 +74,6 @@
                         </div>
                     </div>
 
-                    <!-- Courses -->
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-section">
                             <h4 class="footer-title">Popular Courses</h4>
@@ -94,7 +88,6 @@
                         </div>
                     </div>
 
-                    <!-- Resources -->
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-section">
                             <h4 class="footer-title">Resources</h4>
@@ -109,7 +102,6 @@
                         </div>
                     </div>
 
-                    <!-- Contact Info -->
                     <div class="col-lg-2 col-md-6">
                         <div class="footer-section">
                             <h4 class="footer-title">Contact</h4>
@@ -143,7 +135,6 @@
             </div>
         </div>
 
-        <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="row align-items-center">
@@ -166,17 +157,14 @@
             </div>
         </div>
 
-        <!-- Footer Background Effects -->
         <div class="footer-bg-pattern"></div>
         <div class="footer-gradient"></div>
     </footer>
 
-    <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Success/Error Message Toast -->
     <div id="toastContainer" class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="messageToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -192,11 +180,9 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Schema.org Structured Data for Organization -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -254,9 +240,7 @@
     }
     </script>
 
-    <!-- Performance Monitoring -->
     <script>
-        // Page load performance tracking
         window.addEventListener('load', function() {
             if ('performance' in window) {
                 const perfData = performance.getEntriesByType('navigation')[0];

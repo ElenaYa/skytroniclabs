@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- Reviews Hero Section -->
     <section class="reviews-hero">
         <div class="hero-background">
             <img src="images/reviews-hero-bg.webp" alt="" aria-hidden="true">
@@ -53,7 +52,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Featured Success Stories -->
     <section class="featured-stories py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -244,7 +242,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Review Categories -->
     <section class="review-categories py-5">
         <div class="container">
             <div class="row text-center mb-5">
@@ -254,7 +251,6 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <!-- Course Quality Reviews -->
             <div class="review-category mb-5">
                 <h3 class="category-title">
                     <i class="fas fa-graduation-cap"></i>
@@ -329,7 +325,6 @@ include 'includes/header.php';
                 </div>
             </div>
 
-            <!-- Instructor Reviews -->
             <div class="review-category mb-5">
                 <h3 class="category-title">
                     <i class="fas fa-chalkboard-teacher"></i>
@@ -404,7 +399,6 @@ include 'includes/header.php';
                 </div>
             </div>
 
-            <!-- Career Support Reviews -->
             <div class="review-category mb-5">
                 <h3 class="category-title">
                     <i class="fas fa-briefcase"></i>
@@ -485,7 +479,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Statistics & Ratings Breakdown -->
     <section class="ratings-breakdown py-5">
         <div class="container">
             <div class="row">
@@ -600,7 +593,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Recent Reviews -->
     <section class="recent-reviews py-5">
         <div class="container">
             <div class="row">
@@ -708,7 +700,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="reviews-cta py-5">
         <div class="container">
             <div class="row">

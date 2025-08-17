@@ -6,7 +6,6 @@ include 'includes/header.php';
 ?>
 
 <main id="main-content">
-    <!-- Courses Hero Section -->
     <section class="courses-hero">
         <div class="hero-background">
             <img src="images/reviews-hero-bg.webp" alt="" aria-hidden="true">
@@ -44,7 +43,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Course 1: Full-Stack Web Development -->
     <section id="webdev" class="course-section py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -182,7 +180,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Course 2: Advanced JavaScript -->
     <section id="javascript" class="course-section py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -352,7 +349,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Course 3: PHP & MySQL Development -->
     <section id="php" class="course-section py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -520,7 +516,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Course 4: Cybersecurity Fundamentals -->
     <section id="cybersecurity" class="course-section py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -700,7 +695,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Course 5: Cloud Computing & DevOps -->
     <section id="cloud" class="course-section py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -887,7 +881,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Course 6: AI & Machine Learning -->
     <section id="ai-ml" class="course-section py-5">
         <div class="container">
             <div class="row align-items-center">
@@ -1095,7 +1088,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Enrollment CTA Section -->
     <section class="enrollment-cta py-5">
         <div class="container">
             <div class="row">
