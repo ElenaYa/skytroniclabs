@@ -8,11 +8,15 @@ include 'includes/header.php';
 <main id="main-content">
     <!-- Courses Hero Section -->
     <section class="courses-hero">
+        <div class="hero-background">
+            <img src="images/reviews-hero-bg.webp" alt="" aria-hidden="true">
+            <div class="overlay"></div>
+        </div>
         <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
                     <h1 class="page-title">Master <span class="text-accent">Tomorrow's Technology</span> Today</h1>
-                    <p class="hero-subtitle">Choose from 6 industry-leading courses designed by experts from Google, Microsoft, and top tech companies. Build real projects, earn certifications, and land your dream job.</p>
+                    <p class="hero-subtitle">Choose from 6 industry-leading courses designed by expert practitioners. Build real projects, earn certificates of completion, and accelerate your career.</p>
                     <div class="hero-stats">
                         <div class="stat-item">
                             <span class="stat-number">12,847+</span>
@@ -123,14 +127,11 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#webdev" class="btn btn-primary btn-lg me-3">
+                            <a href="#webdev" class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Full-Stack Web Development">
                                 <i class="fas fa-play"></i>
                                 Enroll Now
                             </a>
-                            <a href="#" class="btn btn-outline-primary btn-lg">
-                                <i class="fas fa-eye"></i>
-                                Free Preview
-                            </a>
+                           
                         </div>
                     </div>
                 </div>
@@ -149,6 +150,26 @@ include 'includes/header.php';
                             <div class="stat">
                                 <span class="number">92%</span>
                                 <span class="label">Job Placement</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-visual mt-4">
+                        <div class="course-summary-card">
+                            <h4>Why this course</h4>
+                            <ul>
+                                <li>Build a professional portfolio with 6+ real-world projects</li>
+                                <li>Weekly 1-on-1 mentoring sessions with industry experts</li>
+                                <li>Career-focused curriculum aligned with employer needs</li>
+                                <li>Learn modern frameworks like React, Vue.js and Node.js</li>
+                                <li>Master responsive design and mobile-first development</li>
+                                <li>Get hands-on experience with agile development practices</li>
+                                <li>Access to exclusive job boards and hiring partners</li>
+                                <li>Industry-recognized certification upon completion</li>
+                                <li>Lifetime access to course updates and community</li>
+                            </ul>
+                            <div class="course-guarantee mt-3">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>30-day money-back guarantee if not satisfied</span>
                             </div>
                         </div>
                     </div>
@@ -268,8 +289,8 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#javascript" class="btn btn-primary btn-lg me-3">Enroll Now</a>
-                            <a href="#" class="btn btn-outline-primary btn-lg">Course Details</a>
+                            <a href="#javascript" class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Advanced JavaScript Mastery">Enroll Now</a>
+                            
                         </div>
                     </div>
                 </div>
@@ -292,6 +313,33 @@ include 'includes/header.php';
                             <div class="tech-item">
                                 <i class="fab fa-vuejs"></i>
                                 <span>Vue.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-visual mt-4">
+                        <div class="course-summary-card">
+                            <h4>Why this course</h4>
+                            <ul>
+                                <li>Master advanced ES6+ and TypeScript patterns for enterprise applications</li>
+                                <li>Build complex apps with React/Vue and modern tooling including webpack, babel and npm</li>
+                                <li>Deep dive into performance optimization, unit/integration testing, and industry best practices</li>
+                                <li>Mentor feedback on advanced projects to accelerate your learning</li>
+                                <li>Learn advanced concepts like closures, prototypes, async patterns and functional programming</li>
+                                <li>Hands-on experience with real-world architecture and design patterns</li>
+                                <li>Build scalable applications using modern state management solutions</li>
+                                <li>Master debugging techniques and performance profiling tools</li>
+                            </ul>
+                            <div class="course-guarantee mt-3">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>30-day money-back guarantee if not satisfied - no questions asked!</span>
+                            </div>
+                            <div class="course-bonus mt-3">
+                                <i class="fas fa-gift"></i>
+                                <span>Bonus: Access to private Discord community and monthly live Q&A sessions</span>
+                            </div>
+                            <div class="course-certificate mt-3">
+                                <i class="fas fa-certificate"></i>
+                                <span>Receive an industry-recognized completion certificate</span>
                             </div>
                         </div>
                     </div>
@@ -370,7 +418,7 @@ include 'includes/header.php';
                                     </div>
                                 </div>
                                 <div class="feature">
-                                    <i class="fas fa-test-tube"></i>
+                                    <i class="fas fa-vial"></i>
                                     <div class="feature-content">
                                         <h5>Testing & Debugging</h5>
                                         <p>PHPUnit testing, debugging tools, and performance optimization</p>
@@ -407,8 +455,8 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#php" class="btn btn-primary btn-lg me-3">Enroll Now</a>
-                            <a href="#" class="btn btn-outline-primary btn-lg">Watch Demo</a>
+                            <a href="#php" class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="PHP & MySQL Development">Enroll Now</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -430,6 +478,36 @@ include 'includes/header.php';
                                     <i class="fas fa-comments"></i>
                                     <span>Social Media API</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-visual mt-4">
+                        <div class="course-summary-card">
+                            <h4>Why this course</h4>
+                            <ul>
+                                <li>Production-grade backend skills with PHP/Laravel</li>
+                                <li>Solid relational database foundations</li>
+                                <li>End-to-end APIs with auth and testing</li>
+                                <li>Guided projects and mentor reviews</li>
+                                <li>Industry best practices and design patterns</li>
+                                <li>Real-world deployment and scaling strategies</li>
+                                <li>Performance optimization techniques</li>
+                                <li>Security best practices and vulnerability prevention</li>
+                                <li>Database optimization and query tuning</li>
+                                <li>Modern PHP 8 features and capabilities</li>
+                            </ul>
+                            <div class="course-benefits mt-3">
+                                <h5>What you'll get:</h5>
+                                <ul>
+                                    <li>24/7 access to course materials</li>
+                                    <li>Hands-on coding exercises</li>
+                                    <li>Real-world project portfolio</li>
+                                    <li>Industry-recognized certification</li>
+                                </ul>
+                            </div>
+                            <div class="course-guarantee mt-3">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>30-day money-back guarantee if not satisfied</span>
                             </div>
                         </div>
                     </div>
@@ -566,8 +644,8 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#cybersecurity" class="btn btn-primary btn-lg me-3">Enroll Now</a>
-                            <a href="#" class="btn btn-outline-primary btn-lg">Lab Preview</a>
+                            <a href="#cybersecurity" class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Cybersecurity & Ethical Hacking">Enroll Now</a>
+                         
                         </div>
                     </div>
                 </div>
@@ -595,6 +673,21 @@ include 'includes/header.php';
                                     <span class="stat-number">3.5M</span>
                                     <span class="stat-label">Open security jobs</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-visual mt-4">
+                        <div class="course-summary-card">
+                            <h4>Why this course</h4>
+                            <ul>
+                                <li>Hands-on labs for real attack/defense scenarios</li>
+                                <li>Learn network, app, and cloud security</li>
+                                <li>Incident response and threat hunting</li>
+                                <li>Guidance for popular certifications</li>
+                            </ul>
+                            <div class="course-guarantee mt-3">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>30-day money-back guarantee if not satisfied</span>
                             </div>
                         </div>
                     </div>
@@ -724,8 +817,8 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#cloud" class="btn btn-primary btn-lg me-3">Enroll Now</a>
-                            <a href="#" class="btn btn-outline-primary btn-lg">AWS Lab Access</a>
+                            <a href="#cloud" class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Cloud & DevOps Engineering">Enroll Now</a>
+                          
                         </div>
                     </div>
                 </div>
@@ -748,6 +841,40 @@ include 'includes/header.php';
                                     <span><i class="fas fa-dharmachakra"></i> Kubernetes</span>
                                     <span><i class="fab fa-jenkins"></i> Jenkins</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-visual mt-4">
+                        <div class="course-summary-card">
+                            <h4>Why this course</h4>
+                            <ul>
+                                <li>Deploy at scale with Docker and Kubernetes containerization</li>
+                                <li>Hands-on CI/CD with modern pipelines using Jenkins, GitLab, and GitHub Actions</li>
+                                <li>Multi-cloud foundations and best practices across AWS, Azure and GCP</li>
+                                <li>Observability, monitoring, and reliability with Prometheus and Grafana</li>
+                                <li>Infrastructure as Code using Terraform and CloudFormation</li>
+                                <li>Microservices architecture and service mesh with Istio</li>
+                                <li>Security best practices and compliance in the cloud</li>
+                                <li>Cost optimization and cloud architecture patterns</li>
+                                <li>High availability and disaster recovery strategies</li>
+                                <li>Real-world projects deploying production applications</li>
+                            </ul>
+                            <div class="course-benefits mt-3">
+                                <h5>What you'll get:</h5>
+                                <ul>
+                                    <li>Hands-on labs in real cloud environments</li>
+                                    <li>Infrastructure automation templates</li>
+                                    <li>CI/CD pipeline examples</li>
+                                    <li>Cloud architecture diagrams</li>
+                                </ul>
+                            </div>
+                            <div class="course-guarantee mt-3">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>30-day money-back guarantee if not satisfied</span>
+                            </div>
+                            <div class="course-bonus mt-3">
+                                <i class="fas fa-gift"></i>
+                                <span>Bonus: $300 cloud credits included for hands-on practice</span>
                             </div>
                         </div>
                     </div>
@@ -893,8 +1020,8 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#ai-ml" class="btn btn-primary btn-lg me-3">Enroll Now</a>
-                            <a href="#" class="btn btn-outline-primary btn-lg">AI Demo</a>
+                            <a href="#ai-ml" class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="AI & Machine Learning">Enroll Now</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -922,6 +1049,40 @@ include 'includes/header.php';
                                     <span class="number">2.3M</span>
                                     <span class="label">AI jobs created annually</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-visual mt-4">
+                        <div class="course-summary-card">
+                            <h4>Why this course</h4>
+                            <ul>
+                                <li>Practical AI projects for real-world impact</li>
+                                <li>Deep learning with TensorFlow and PyTorch</li>
+                                <li>Computer vision and NLP applications</li>
+                                <li>Model deployment and MLOps basics</li>
+                                <li>Machine learning algorithms and statistical modeling</li>
+                                <li>Neural networks architecture and optimization</li>
+                                <li>Data preprocessing and feature engineering</li>
+                                <li>Reinforcement learning fundamentals</li>
+                                <li>Time series analysis and forecasting</li>
+                                <li>Ethics in AI and responsible development</li>
+                            </ul>
+                            <div class="course-benefits mt-3">
+                                <h5>What you'll get:</h5>
+                                <ul>
+                                    <li>Hands-on experience with real datasets</li>
+                                    <li>Industry-standard AI/ML tools and frameworks</li>
+                                    <li>Portfolio of completed AI projects</li>
+                                    <li>Access to GPU-powered cloud environments</li>
+                                </ul>
+                            </div>
+                            <div class="course-guarantee mt-3">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>30-day money-back guarantee if not satisfied</span>
+                            </div>
+                            <div class="course-bonus mt-3">
+                                <i class="fas fa-gift"></i>
+                                <span>Bonus: $200 in cloud credits for model training</span>
                             </div>
                         </div>
                     </div>
@@ -981,3 +1142,35 @@ include 'includes/header.php';
 </main>
 
 <?php include 'includes/footer.php'; ?>
+<!-- Enroll Modal -->
+<div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enrollModalLabel">Quick Enrollment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="enrollForm" novalidate>
+          <div class="mb-3">
+            <label for="enrollName" class="form-label">Full Name *</label>
+            <input type="text" class="form-control" id="enrollName" name="name" required autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="mb-3">
+            <label for="enrollEmail" class="form-label">Email *</label>
+            <input type="email" class="form-control" id="enrollEmail" name="email" required autocomplete="email" placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="enrollCourse" class="form-label">Selected Course</label>
+            <input type="text" class="form-control" id="enrollCourse" name="course" readonly>
+          </div>
+          <p class="text-muted mb-0">We will contact you shortly with next steps and scheduling options.</p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="enrollSubmitBtn">Submit</button>
+      </div>
+    </div>
+  </div>
+  </div>

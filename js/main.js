@@ -1032,6 +1032,41 @@ class FormHandler {
         if (referrerUrlInput && document.referrer) {
             referrerUrlInput.value = document.referrer;
         }
+
+        // Enroll modal handlers
+        const enrollModalEl = document.getElementById('enrollModal');
+        if (enrollModalEl) {
+            // Populate course field from triggering button
+            enrollModalEl.addEventListener('show.bs.modal', (event) => {
+                const button = event.relatedTarget;
+                const course = button?.getAttribute('data-course') || '';
+                const courseInput = document.getElementById('enrollCourse');
+                if (courseInput) courseInput.value = course;
+            });
+
+            const submitBtn = document.getElementById('enrollSubmitBtn');
+            const form = document.getElementById('enrollForm');
+            submitBtn?.addEventListener('click', async () => {
+                if (!form) return;
+                const nameInput = document.getElementById('enrollName');
+                const emailInput = document.getElementById('enrollEmail');
+                // simple validation
+                const ok = this.validateField(nameInput) & this.validateField(emailInput);
+                if (!ok) return;
+                // Simulate submit
+                submitBtn.disabled = true;
+                const original = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                await new Promise(r => setTimeout(r, 1200));
+                Utils.showToast('Thanks! We\'ll contact you shortly.');
+                form.reset();
+                submitBtn.textContent = original;
+                submitBtn.disabled = false;
+                // Hide modal
+                const modalInstance = bootstrap?.Modal?.getInstance(enrollModalEl) || new bootstrap.Modal(enrollModalEl);
+                modalInstance.hide();
+            });
+        }
     }
 
     nextStep(form) {

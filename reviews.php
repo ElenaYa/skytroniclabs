@@ -731,7 +731,7 @@ include 'includes/header.php';
                             </div>
                         </div>
                         <div class="cta-actions">
-                            <a href="courses.php" class="btn btn-primary btn-lg me-3">
+                            <a href="courses.php" class="btn btn-primary btn-lg me-3" data-bs-toggle="modal" data-bs-target="#enrollModal">
                                 <i class="fas fa-graduation-cap"></i>
                                 Start Your Journey
                             </a>
