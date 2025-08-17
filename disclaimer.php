@@ -745,7 +745,7 @@ include 'includes/header.php';
                                 <div class="contact-options">
                                     <div class="contact-option">
                                         <h3>📧 Legal Team</h3>
-                                        <p><a href="mailto:legal@skytroniclabs.com">legal@skytroniclabs.com</a></p>
+                                        <p><a href="mailto:admin@skytroniclabs.com">admin@skytroniclabs.com</a></p>
                                     </div>
                                     <div class="contact-option">
                                         <h3>📬 Postal Address</h3>

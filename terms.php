@@ -45,13 +45,8 @@ include 'includes/header.php';
                             <a href="#services" class="nav-link">3. Service Description</a>
                             <a href="#payment" class="nav-link">4. Payment Terms</a>
                             <a href="#conduct" class="nav-link">5. User Conduct</a>
-                            <a href="#content" class="nav-link">6. Content & IP</a>
-                            <a href="#privacy" class="nav-link">7. Privacy & Data</a>
-                            <a href="#disclaimers" class="nav-link">8. Disclaimers</a>
-                            <a href="#limitation" class="nav-link">9. Liability Limits</a>
-                            <a href="#termination" class="nav-link">10. Termination</a>
-                            <a href="#governing" class="nav-link">11. Governing Law</a>
-                            <a href="#changes" class="nav-link">12. Policy Changes</a>
+                            <a href="#governing" class="nav-link">6. Governing Law</a>
+                            <a href="#changes" class="nav-link">7. Policy Changes</a>
                         </nav>
                         
                         <div class="key-points">
@@ -680,13 +675,13 @@ include 'includes/header.php';
                                 <div class="contact-option">
                                     <h3>📧 Legal Department</h3>
                                     <p>For questions about these terms or legal matters:</p>
-                                    <p><a href="mailto:legal@skytroniclabs.com">legal@skytroniclabs.com</a></p>
+                                    <p><a href="mailto:admin@skytroniclabs.com">admin@skytroniclabs.com</a></p>
                                 </div>
                                 
                                 <div class="contact-option">
                                     <h3>🎓 Student Support</h3>
                                     <p>For general questions about courses and services:</p>
-                                    <p><a href="mailto:support@skytroniclabs.com">support@skytroniclabs.com</a></p>
+                                    <p><a href="mailto:admin@skytroniclabs.com">admin@skytroniclabs.com</a></p>
                                 </div>
                                 
                                 <div class="contact-option">

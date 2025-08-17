@@ -31,37 +31,6 @@ include 'includes/header.php';
             </div>
         </div>
     </section>
-
-    <!-- Quick Cookie Controls -->
-    <section class="cookie-controls py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="cookie-control-panel">
-                        <div class="control-info">
-                            <h3>Manage Your Cookie Preferences</h3>
-                            <p>Control which cookies we use to personalize your experience</p>
-                        </div>
-                        <div class="control-actions">
-                            <button class="btn btn-primary" onclick="manageCookies()">
-                                <i class="fas fa-cog"></i>
-                                Cookie Settings
-                            </button>
-                            <button class="btn btn-outline-secondary" onclick="acceptAllCookies()">
-                                <i class="fas fa-check"></i>
-                                Accept All
-                            </button>
-                            <button class="btn btn-outline-danger" onclick="rejectAllCookies()">
-                                <i class="fas fa-times"></i>
-                                Reject All
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Cookie Policy Content -->
     <section class="cookie-content py-5">
         <div class="container">
@@ -905,20 +874,6 @@ include 'includes/header.php';
                                                 <li>Instant application of changes</li>
                                             </ul>
                                         </div>
-                                        <div class="preference-actions">
-                                            <button class="btn btn-primary me-2" onclick="manageCookies()">
-                                                <i class="fas fa-cog"></i>
-                                                Open Cookie Settings
-                                            </button>
-                                            <button class="btn btn-success me-2" onclick="acceptAllCookies()">
-                                                <i class="fas fa-check"></i>
-                                                Accept All
-                                            </button>
-                                            <button class="btn btn-outline-danger" onclick="rejectAllCookies()">
-                                                <i class="fas fa-times"></i>
-                                                Reject Optional
-                                            </button>
-                                        </div>
                                     </div>
                                     
                                     <div class="management-method">
@@ -1250,11 +1205,7 @@ include 'includes/header.php';
                                 <div class="contact-options">
                                     <div class="contact-option">
                                         <h3>🍪 Cookie Questions</h3>
-                                        <p><a href="mailto:privacy@skytroniclabs.com">privacy@skytroniclabs.com</a></p>
-                                    </div>
-                                    <div class="contact-option">
-                                        <h3>📧 Data Protection Officer</h3>
-                                        <p><a href="mailto:dpo@skytroniclabs.com">dpo@skytroniclabs.com</a></p>
+                                        <p><a href="mailto:admin@skytroniclabs.com">admin@skytroniclabs.com</a></p>
                                     </div>
                                     <div class="contact-option">
                                         <h3>📬 Postal Address</h3>

@@ -1,11 +1,4 @@
-/**
- * Skytronic Labs - Main JavaScript File
- * Handles all interactive functionality and animations
- */
 
-// =================================
-// GLOBAL VARIABLES & CONFIGURATION
-// =================================
 
 let isScrolling = false;
 let scrollTimeout;
@@ -34,15 +27,8 @@ const config = {
     }
 };
 
-// =================================
-// UTILITY FUNCTIONS
-// =================================
 
-/**
- * Utility functions for common operations
- */
 const Utils = {
-    // Debounce function for performance
     debounce(func, wait, immediate) {
         let timeout;
         return function executedFunction(...args) {
@@ -57,7 +43,6 @@ const Utils = {
         };
     },
 
-    // Throttle function for scroll events
     throttle(func, limit) {
         let inThrottle;
         return function(...args) {
@@ -69,7 +54,6 @@ const Utils = {
         };
     },
 
-    // Check if element is in viewport
     isInViewport(element, threshold = 0.1) {
         const rect = element.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -83,7 +67,6 @@ const Utils = {
         );
     },
 
-    // Get current breakpoint
     getCurrentBreakpoint() {
         const width = window.innerWidth;
         if (width < config.breakpoints.mobile) return 'mobile';
@@ -91,7 +74,6 @@ const Utils = {
         return 'desktop';
     },
 
-    // Smooth scroll to element
     scrollTo(target, offset = 0) {
         const element = typeof target === 'string' ? document.querySelector(target) : target;
         if (!element) return;
@@ -103,7 +85,6 @@ const Utils = {
         });
     },
 
-    // Show toast notification
     showToast(message, type = 'success', duration = 3000) {
         const toast = document.getElementById('messageToast');
         const toastBody = toast.querySelector('.toast-body');
@@ -111,20 +92,16 @@ const Utils = {
         
         if (!toast || !toastBody) return;
 
-        // Set message and icon based on type
         toastBody.textContent = message;
         toastIcon.className = type === 'success' ? 'fas fa-check-circle text-success' : 'fas fa-exclamation-circle text-danger';
         
-        // Show toast
         toast.classList.add('show');
         
-        // Hide toast after duration
         setTimeout(() => {
             toast.classList.remove('show');
         }, duration);
     },
 
-    // Cookie utilities
     setCookie(name, value, days) {
         const expires = new Date();
         expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -147,9 +124,6 @@ const Utils = {
     }
 };
 
-// =================================
-// LOADING SCREEN
-// =================================
 
 class LoadingScreen {
     constructor() {
@@ -161,15 +135,12 @@ class LoadingScreen {
     init() {
         if (!this.loadingScreen) return;
 
-        // Simulate loading progress
         this.simulateProgress();
 
-        // Hide loading screen when page is fully loaded
         window.addEventListener('load', () => {
             this.hide();
         });
 
-        // Fallback: hide loading screen after 3 seconds
         setTimeout(() => {
             if (!this.isLoaded) this.hide();
         }, 3000);
@@ -194,21 +165,17 @@ class LoadingScreen {
         
         this.isLoaded = true;
         this.loadingScreen.classList.add('hidden');
-        // Notify other components that loading has finished
         try {
             document.dispatchEvent(new CustomEvent('skytronic:loadingHidden'));
         } catch (e) {}
         
-        // Remove from DOM after animation
         setTimeout(() => {
             this.loadingScreen.remove();
         }, 500);
     }
 }
 
-// =================================
-// HEADER FUNCTIONALITY
-// =================================
+
 
 class Header {
     constructor() {
@@ -232,21 +199,18 @@ class Header {
         this.setupDropdowns();
         this.setupSmoothScroll();
         
-        // Add scroll event listener
         window.addEventListener('scroll', Utils.throttle(() => this.handleScroll(), 16));
     }
 
     handleScroll() {
         const currentScrollY = window.pageYOffset;
         
-        // Add scrolled class for styling
         if (currentScrollY > 50) {
             this.header.classList.add('scrolled');
         } else {
             this.header.classList.remove('scrolled');
         }
 
-        // Hide/show header on scroll (optional)
         if (currentScrollY > this.lastScrollY && currentScrollY > 100) {
             this.header.style.transform = 'translateY(-100%)';
         } else {
@@ -259,7 +223,7 @@ class Header {
     setupMobileMenu() {
         if (!this.navToggler) return;
 
-        // If Bootstrap Collapse is present, let it handle toggling via data attributes
+        
         if (!this.collapse) {
             this.navToggler.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -267,7 +231,6 @@ class Header {
             });
         }
 
-        // Sync state with Bootstrap collapse if available
         if (this.collapseEl) {
             this.collapseEl.addEventListener('shown.bs.collapse', () => {
                 this.isMenuOpen = true;
@@ -283,7 +246,6 @@ class Header {
             });
         }
 
-        // Close menu when clicking nav links (but not dropdown toggles)
         this.navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 const isDropdownToggle = link.classList.contains('dropdown-toggle') || link.getAttribute('data-bs-toggle') === 'dropdown';
@@ -294,7 +256,6 @@ class Header {
             });
         });
 
-        // Close on dropdown item click inside mobile menu
         const dropdownItems = document.querySelectorAll('#navbarNav .dropdown-menu .dropdown-item');
         dropdownItems.forEach(item => {
             item.addEventListener('click', () => {
@@ -304,7 +265,6 @@ class Header {
             });
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (this.isMenuOpen && !this.navbar.contains(e.target)) {
                 this.closeMobileMenu();
@@ -316,11 +276,9 @@ class Header {
         this.isMenuOpen = !this.isMenuOpen;
         this.navToggler.classList.toggle('active');
         this.navToggler.setAttribute('aria-expanded', this.isMenuOpen ? 'true' : 'false');
-        // Fallback for when Bootstrap's Collapse isn't available
         if (this.navMenu) {
             this.navMenu.classList.toggle('active');
         }
-        // Prevent body scroll when menu is open
         document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
     }
 
@@ -329,7 +287,6 @@ class Header {
             this.collapse.hide();
             return;
         }
-        // Fallback explicit close
         this.isMenuOpen = false;
         this.navToggler.classList.remove('active');
         if (this.navMenu) {
@@ -346,7 +303,6 @@ class Header {
             
             if (!toggle || !menu) return;
 
-            // Touch/click handling for mobile
             if (Utils.getCurrentBreakpoint() === 'mobile') {
                 toggle.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -372,9 +328,7 @@ class Header {
     }
 }
 
-// =================================
-// COOKIE CONSENT MANAGEMENT
-// =================================
+
 
 class CookieConsent {
     constructor() {
@@ -396,20 +350,17 @@ class CookieConsent {
     }
 
     setupEventListeners() {
-        // Global functions for cookie management
         window.acceptCookies = () => this.acceptAll();
         window.rejectCookies = () => this.rejectAll();
         window.manageCookies = () => this.showModal();
         window.closeCookieModal = () => this.hideModal();
         window.saveCookiePreferences = () => this.savePreferences();
 
-        // Modal close button
         const closeBtn = this.modal?.querySelector('.btn-close');
         if (closeBtn) {
             closeBtn.addEventListener('click', () => this.hideModal());
         }
 
-        // Modal backdrop click
         if (this.modal) {
             this.modal.addEventListener('click', (e) => {
                 if (e.target === this.modal) {
@@ -418,7 +369,6 @@ class CookieConsent {
             });
         }
 
-        // Toggle switches
         const toggles = document.querySelectorAll('.toggle-cookies');
         toggles.forEach(toggle => {
             toggle.addEventListener('click', (e) => {
@@ -490,7 +440,6 @@ class CookieConsent {
     }
 
     savePreferences() {
-        // Get toggle states from modal
         const performanceToggle = document.getElementById('performance');
         const marketingToggle = document.getElementById('marketing');
 
@@ -543,7 +492,6 @@ class CookieConsent {
             this.disableAnalytics();
         }
 
-        // Apply marketing tracking
         if (this.preferences.marketing) {
             this.enableMarketing();
         } else {
@@ -552,65 +500,55 @@ class CookieConsent {
     }
 
     enableAnalytics() {
-        // Enable Google Analytics
         if (typeof gtag !== 'undefined') {
             gtag('consent', 'update', {
                 'analytics_storage': 'granted'
             });
         }
         
-        // Enable other analytics services
         if (typeof mixpanel !== 'undefined') {
             mixpanel.opt_in_tracking();
         }
     }
 
     disableAnalytics() {
-        // Disable Google Analytics
         if (typeof gtag !== 'undefined') {
             gtag('consent', 'update', {
                 'analytics_storage': 'denied'
             });
         }
         
-        // Disable other analytics services
         if (typeof mixpanel !== 'undefined') {
             mixpanel.opt_out_tracking();
         }
     }
 
     enableMarketing() {
-        // Enable marketing cookies
         if (typeof gtag !== 'undefined') {
             gtag('consent', 'update', {
                 'ad_storage': 'granted'
             });
         }
         
-        // Enable Facebook Pixel
         if (typeof fbq !== 'undefined') {
             fbq('consent', 'grant');
         }
     }
 
     disableMarketing() {
-        // Disable marketing cookies
         if (typeof gtag !== 'undefined') {
             gtag('consent', 'update', {
                 'ad_storage': 'denied'
             });
         }
         
-        // Disable Facebook Pixel
         if (typeof fbq !== 'undefined') {
             fbq('consent', 'revoke');
         }
     }
 }
 
-// =================================
-// ANIMATIONS & SCROLL EFFECTS
-// =================================
+
 
 class Animations {
     constructor() {
@@ -631,10 +569,9 @@ class Animations {
     }
 
     setupPageAnimations() {
-        // Page load animations
         this.timeline = gsap.timeline({ paused: true });
         
-        // Animate hero content (guard per selector so pages without hero don't warn)
+      
         const heroTitle = document.querySelector('.hero-title');
         const heroSubtitle = document.querySelector('.hero-subtitle');
         const heroCtas = document.querySelectorAll('.hero-cta .btn');
@@ -682,7 +619,6 @@ class Animations {
             }, (heroTitle || heroSubtitle || heroCtas.length) ? '-=0.1' : 0);
         }
 
-        // Animate floating cards
         const playFloating = () => {
             const cards = document.querySelectorAll('.floating-card');
             if (cards.length === 0) return;
@@ -721,10 +657,8 @@ class Animations {
     setupScrollAnimations() {
         if (typeof ScrollTrigger === 'undefined') return;
 
-        // Register ScrollTrigger plugin
         gsap.registerPlugin(ScrollTrigger);
 
-        // Animate sections on scroll
         const sections = document.querySelectorAll('section');
         sections.forEach((section, index) => {
             if (section.classList.contains('hero-section')) return;
@@ -741,7 +675,6 @@ class Animations {
             this.scrollTriggers.push(st);
         });
 
-        // Animate cards
         const cards = document.querySelectorAll('.feature-card, .course-card, .review-card');
         cards.forEach((card, index) => {
             const st = ScrollTrigger.create({
@@ -763,7 +696,6 @@ class Animations {
             this.scrollTriggers.push(st);
         });
 
-        // Animate section titles
         const titles = document.querySelectorAll('.section-title');
         titles.forEach(title => {
             const st = ScrollTrigger.create({
@@ -786,7 +718,6 @@ class Animations {
     }
 
     setupParallaxEffects() {
-        // Parallax for hero background
         const heroBg = document.querySelector('.hero-bg-animation');
         if (heroBg) {
             const st = ScrollTrigger.create({
@@ -803,7 +734,6 @@ class Animations {
             this.scrollTriggers.push(st);
         }
 
-        // Parallax for floating elements
         const floatingElements = document.querySelectorAll('.floating-card');
         floatingElements.forEach(element => {
             const st = ScrollTrigger.create({
@@ -822,13 +752,11 @@ class Animations {
     }
 
     setupCounterAnimations() {
-        // Animate number counters
         if (typeof ScrollTrigger === 'undefined') return;
 
         const bindCounters = () => {
             const counters = document.querySelectorAll('.stat-number');
             counters.forEach(counter => {
-                // prevent duplicate bindings
                 if (counter.dataset.counterBound === 'true') return;
                 counter.dataset.counterBound = 'true';
 
@@ -845,7 +773,7 @@ class Animations {
             });
         };
 
-        // Defer binding until the loading screen is hidden to avoid animating under overlay
+     
         const hasLoading = !!document.getElementById('loading-screen');
         if (hasLoading) {
             document.addEventListener('skytronic:loadingHidden', bindCounters, { once: true });
@@ -912,7 +840,6 @@ class Animations {
             return;
         }
 
-        // Plain number with optional decimals
         const targetValue = parseNumber(numericPart);
         if (isNaN(targetValue)) return;
         const decimals = numericPart.includes('.') ? (numericPart.split('.')[1]?.replace(/\D/g, '').length || 0) : 0;
@@ -945,7 +872,6 @@ class Animations {
     }
 
     destroy() {
-        // Clean up ScrollTriggers
         this.scrollTriggers.forEach(st => st.kill());
         this.scrollTriggers = [];
         
@@ -955,9 +881,6 @@ class Animations {
     }
 }
 
-// =================================
-// FORM HANDLING
-// =================================
 
 class FormHandler {
     constructor() {
@@ -975,11 +898,9 @@ class FormHandler {
 
     setupForms() {
         this.forms.forEach(form => {
-            // Disable native validation; we handle it manually
             form.setAttribute('novalidate', 'novalidate');
             form.addEventListener('submit', (e) => this.handleSubmit(e));
             
-            // Real-time validation
             const inputs = form.querySelectorAll('input, textarea, select');
             inputs.forEach(input => {
                 input.addEventListener('blur', () => this.validateField(input));
@@ -1021,7 +942,6 @@ class FormHandler {
     }
 
     setupContactForm() {
-        // Auto-populate URL fields in error reports
         const errorUrlInput = document.getElementById('errorUrl');
         const referrerUrlInput = document.getElementById('referrerUrl');
         
@@ -1072,36 +992,29 @@ class FormHandler {
     nextStep(form) {
         const currentStepDiv = form.querySelector(`[data-step="${this.currentStep}"]`);
         
-        // Validate current step
         if (!this.validateStep(currentStepDiv)) return;
 
-        // Hide current step
         currentStepDiv.classList.remove('active');
         
-        // Show next step
         this.currentStep++;
         const nextStepDiv = form.querySelector(`[data-step="${this.currentStep}"]`);
         if (nextStepDiv) {
             nextStepDiv.classList.add('active');
         }
 
-        // Update progress if exists
         this.updateProgress();
     }
 
     prevStep(form) {
-        // Hide current step
         const currentStepDiv = form.querySelector(`[data-step="${this.currentStep}"]`);
         currentStepDiv.classList.remove('active');
         
-        // Show previous step
         this.currentStep--;
         const prevStepDiv = form.querySelector(`[data-step="${this.currentStep}"]`);
         if (prevStepDiv) {
             prevStepDiv.classList.add('active');
         }
 
-        // Update progress if exists
         this.updateProgress();
     }
 
@@ -1138,17 +1051,14 @@ class FormHandler {
                 isValid = false;
             }
         }
-        // Checkbox required validation
         else if (type === 'checkbox' && field.hasAttribute('required') && !field.checked) {
             errorMessage = 'This field is required';
             isValid = false;
         }
-        // Required field validation for other types
         else if (field.hasAttribute('required') && !value) {
             errorMessage = 'This field is required';
             isValid = false;
         }
-        // Email validation
         else if (type === 'email' && value) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(value)) {
@@ -1156,7 +1066,6 @@ class FormHandler {
                 isValid = false;
             }
         }
-        // Phone validation
         else if (type === 'tel' && value) {
             const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
             if (!phoneRegex.test(value.replace(/[\s\-\(\)]/g, ''))) {
@@ -1164,7 +1073,6 @@ class FormHandler {
                 isValid = false;
             }
         }
-        // URL validation
         else if (type === 'url' && value) {
             try {
                 new URL(value);
@@ -1183,19 +1091,16 @@ class FormHandler {
 
     showFieldError(field, message) {
         field.classList.add('is-invalid');
-        // Highlight associated label as well (for checkboxes/radios)
         const label = (field.id ? (field.form || document).querySelector(`label[for="${field.id}"]`) : null) || field.closest('.form-check')?.querySelector('.form-check-label');
         if (label) {
             label.classList.add('text-danger');
         }
 
-        // Remove existing error message
         const existingError = field.parentNode.querySelector('.error-message');
         if (existingError) {
             existingError.remove();
         }
 
-        // Add new error message
         const errorDiv = document.createElement('div');
         errorDiv.className = 'error-message text-danger mt-1';
         errorDiv.textContent = message;
@@ -1226,7 +1131,7 @@ class FormHandler {
     async handleSubmit(e) {
         e.preventDefault();
         const form = e.target;
-        // Temporarily disable required on hidden fields to avoid native validation errors
+       
         const hiddenRequired = [];
         form.querySelectorAll('[required]').forEach((el) => {
             if (!this.isElementVisible(el)) {
@@ -1235,27 +1140,22 @@ class FormHandler {
             }
         });
         
-        // Validate entire form
         if (!this.validateForm(form)) {
             Utils.showToast('Please correct the errors before submitting', 'error');
-            // Restore attributes
             hiddenRequired.forEach((el) => el.setAttribute('required', ''));
             return;
         }
 
-        // Show loading state
         const submitBtn = form.querySelector('[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
         try {
-            // Simulate form submission (replace with actual API call)
             await this.submitForm(form);
             Utils.showToast('Message sent successfully!');
             form.reset();
             
-            // Reset multi-step form if applicable
             if (form.classList.contains('multi-step')) {
                 this.resetMultiStepForm(form);
             }
@@ -1263,16 +1163,13 @@ class FormHandler {
             console.error('Form submission error:', error);
             Utils.showToast('Failed to send message. Please try again.', 'error');
         } finally {
-            // Restore button state
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
-            // Restore attributes
             hiddenRequired.forEach((el) => el.setAttribute('required', ''));
         }
     }
 
     validateForm(form) {
-        // Validate only visible required fields
         const requiredFields = Array.from(form.querySelectorAll('[required]'))
             .filter((el) => this.isElementVisible(el));
         let isValid = true;
@@ -1287,10 +1184,8 @@ class FormHandler {
     }
 
     async submitForm(form) {
-        // Simulate API call
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                // Simulate success (replace with actual API call)
                 if (Math.random() > 0.1) {
                     resolve({ success: true });
                 } else {
@@ -1320,7 +1215,6 @@ class FormHandler {
         submitBtn.disabled = true;
 
         try {
-            // Simulate newsletter subscription
             await new Promise(resolve => setTimeout(resolve, 1500));
             Utils.showToast('Successfully subscribed to newsletter!');
             form.reset();
@@ -1333,25 +1227,19 @@ class FormHandler {
     }
 
     resetMultiStepForm(form) {
-        // Hide all steps
         const steps = form.querySelectorAll('.form-step');
         steps.forEach(step => step.classList.remove('active'));
         
-        // Show first step
         const firstStep = form.querySelector('[data-step="1"]');
         if (firstStep) {
             firstStep.classList.add('active');
         }
         
-        // Reset step counter
         this.currentStep = 1;
         this.updateProgress();
     }
 }
 
-// =================================
-// FAQ ACCORDION
-// =================================
 
 class FAQAccordion {
     constructor() {
@@ -1374,14 +1262,12 @@ class FAQAccordion {
     toggleItem(item) {
         const isActive = item.classList.contains('active');
         
-        // Close all other items
         this.faqItems.forEach(otherItem => {
             if (otherItem !== item) {
                 otherItem.classList.remove('active');
             }
         });
         
-        // Toggle current item
         if (isActive) {
             item.classList.remove('active');
         } else {
@@ -1390,9 +1276,6 @@ class FAQAccordion {
     }
 }
 
-// =================================
-// BACK TO TOP BUTTON
-// =================================
 
 class BackToTop {
     constructor() {
@@ -1435,12 +1318,6 @@ class BackToTop {
     }
 }
 
-
-
-// =================================
-// LIVE CHAT INTEGRATION
-// =================================
-
 class LiveChat {
     constructor() {
         this.chatButtons = document.querySelectorAll('#startLiveChat, [onclick*="startLiveChat"]');
@@ -1455,12 +1332,10 @@ class LiveChat {
             });
         });
 
-        // Initialize chat widget if available
         this.initializeChatWidget();
     }
 
     startChat() {
-        // Integration with chat service (Intercom, Zendesk, etc.)
         if (typeof Intercom !== 'undefined') {
             Intercom('show');
         } else if (typeof $zopim !== 'undefined') {
@@ -1476,9 +1351,7 @@ class LiveChat {
     }
 
     initializeChatWidget() {
-        // Initialize chat widget based on available service
         if (!this.isInitialized) {
-            // Example Intercom integration
             if (window.intercomSettings) {
                 this.initializeIntercom();
             }
@@ -1487,14 +1360,11 @@ class LiveChat {
     }
 
     initializeIntercom() {
-        // Intercom integration example
         (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/YOUR_APP_ID';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
     }
 }
 
-// =================================
-// ERROR HANDLING & ANALYTICS
-// =================================
+
 
 class ErrorHandler {
     constructor() {
@@ -1503,11 +1373,9 @@ class ErrorHandler {
     }
 
     init() {
-        // Global error handling
         window.addEventListener('error', (e) => this.handleError(e));
         window.addEventListener('unhandledrejection', (e) => this.handlePromiseRejection(e));
         
-        // Console error override (for development)
         if (window.location.hostname !== 'localhost') {
             this.overrideConsole();
         }
@@ -1531,7 +1399,6 @@ class ErrorHandler {
 
         console.error('JavaScript Error:', error);
         
-        // Send to analytics/error tracking service
         this.reportError(error);
     }
 
@@ -1549,7 +1416,6 @@ class ErrorHandler {
     }
 
     reportError(error) {
-        // Send error to tracking service (replace with your service)
         if (typeof gtag !== 'undefined') {
             gtag('event', 'exception', {
                 'description': error.message || error.reason,
@@ -1557,12 +1423,7 @@ class ErrorHandler {
             });
         }
         
-        // You can also send to your own error tracking service
-        // fetch('/api/errors', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(error)
-        // });
+     
     }
 
     overrideConsole() {
@@ -1578,9 +1439,7 @@ class ErrorHandler {
     }
 }
 
-// =================================
-// PERFORMANCE MONITORING
-// =================================
+
 
 class PerformanceMonitor {
     constructor() {
@@ -1594,7 +1453,6 @@ class PerformanceMonitor {
         this.measurePageLoad();
         this.measureUserInteractions();
         
-        // Report metrics after page load
         window.addEventListener('load', () => {
             setTimeout(() => this.reportMetrics(), 1000);
         });
@@ -1615,7 +1473,6 @@ class PerformanceMonitor {
     }
 
     measureUserInteractions() {
-        // Measure First Input Delay (FID)
         if ('PerformanceObserver' in window) {
             new PerformanceObserver((entryList) => {
                 for (const entry of entryList.getEntries()) {
@@ -1625,7 +1482,6 @@ class PerformanceMonitor {
                 }
             }).observe({ type: 'first-input', buffered: true });
 
-            // Measure Cumulative Layout Shift (CLS)
             new PerformanceObserver((entryList) => {
                 let clsValue = 0;
                 for (const entry of entryList.getEntries()) {
@@ -1640,7 +1496,6 @@ class PerformanceMonitor {
 
     reportMetrics() {
         if (typeof gtag !== 'undefined') {
-            // Report to Google Analytics
             Object.keys(this.metrics).forEach(metric => {
                 gtag('event', 'timing_complete', {
                     'name': metric,
@@ -1652,9 +1507,6 @@ class PerformanceMonitor {
     }
 }
 
-// =================================
-// MAIN APP INITIALIZATION
-// =================================
 
 class SkytronicLabsApp {
     constructor() {
@@ -1666,7 +1518,6 @@ class SkytronicLabsApp {
         if (this.isInitialized) return;
 
         try {
-            // Initialize core components
             this.components.loadingScreen = new LoadingScreen();
             this.components.header = new Header();
             this.components.cookieConsent = new CookieConsent();
@@ -1678,7 +1529,6 @@ class SkytronicLabsApp {
             this.components.errorHandler = new ErrorHandler();
             this.components.performanceMonitor = new PerformanceMonitor();
 
-            // Initialize all components
             Object.values(this.components).forEach(component => {
                 if (component && typeof component.init === 'function') {
                     component.init();
@@ -1695,21 +1545,17 @@ class SkytronicLabsApp {
     }
 
     setupGlobalEventListeners() {
-        // Handle responsive changes
         window.addEventListener('resize', Utils.debounce(() => {
             this.handleResize();
         }, 250));
 
-        // Handle visibility changes
         document.addEventListener('visibilitychange', () => {
             this.handleVisibilityChange();
         });
 
-        // Handle online/offline status
         window.addEventListener('online', () => this.handleOnlineStatus(true));
         window.addEventListener('offline', () => this.handleOnlineStatus(false));
 
-        // Smooth scroll for same-page hash links anywhere in the document
         document.addEventListener('click', (e) => {
             const anchor = e.target.closest('a[href^="#"]');
             if (!anchor) return;
@@ -1729,7 +1575,6 @@ class SkytronicLabsApp {
             if (!hash) return;
             const target = document.querySelector(hash);
             if (!target) return;
-            // slight defer to allow layout/fonts to settle
             setTimeout(() => Utils.scrollTo(target, 90), 50);
         };
 
@@ -1743,12 +1588,10 @@ class SkytronicLabsApp {
     }
 
     handleResize() {
-        // Refresh ScrollTrigger on resize
         if (typeof ScrollTrigger !== 'undefined') {
             ScrollTrigger.refresh();
         }
 
-        // Update mobile menu state
         if (Utils.getCurrentBreakpoint() !== 'mobile' && this.components.header.isMenuOpen) {
             this.components.header.closeMobileMenu();
         }
@@ -1756,9 +1599,7 @@ class SkytronicLabsApp {
 
     handleVisibilityChange() {
         if (document.hidden) {
-            // Page is hidden
         } else {
-            // Page is visible
         }
     }
 
@@ -1771,7 +1612,6 @@ class SkytronicLabsApp {
     }
 
     destroy() {
-        // Clean up components
         Object.values(this.components).forEach(component => {
             if (component && typeof component.destroy === 'function') {
                 component.destroy();
@@ -1783,11 +1623,7 @@ class SkytronicLabsApp {
     }
 }
 
-// =================================
-// INITIALIZE APPLICATION
-// =================================
 
-// Initialize app when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
@@ -1798,11 +1634,9 @@ async function initializeApp() {
     const app = new SkytronicLabsApp();
     await app.init();
     
-    // Make app globally available for debugging
     window.SkytronicLabsApp = app;
 }
 
-// Export for module systems
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { SkytronicLabsApp, Utils };
 }
