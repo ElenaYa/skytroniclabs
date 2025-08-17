@@ -1353,114 +1353,7 @@ class BackToTop {
     }
 }
 
-// =================================
-// SEARCH FUNCTIONALITY
-// =================================
 
-class Search {
-    constructor() {
-        this.searchInputs = document.querySelectorAll('#faqSearch, .search-form input');
-        this.searchableElements = document.querySelectorAll('.faq-item, .course-card, .feature-card');
-    }
-
-    init() {
-        if (this.searchInputs.length === 0) return;
-
-        this.searchInputs.forEach(input => {
-            input.addEventListener('input', Utils.debounce((e) => this.performSearch(e.target.value), 300));
-        });
-    }
-
-    performSearch(query) {
-        const searchTerm = query.toLowerCase().trim();
-        
-        if (!searchTerm) {
-            this.showAllElements();
-            return;
-        }
-
-        let visibleCount = 0;
-
-        this.searchableElements.forEach(element => {
-            const text = element.textContent.toLowerCase();
-            const isMatch = text.includes(searchTerm);
-            
-            if (isMatch) {
-                element.style.display = '';
-                visibleCount++;
-                this.highlightText(element, searchTerm);
-            } else {
-                element.style.display = 'none';
-            }
-        });
-
-        // Show no results message if needed
-        this.showNoResultsMessage(visibleCount === 0);
-    }
-
-    showAllElements() {
-        this.searchableElements.forEach(element => {
-            element.style.display = '';
-            this.removeHighlight(element);
-        });
-        this.showNoResultsMessage(false);
-    }
-
-    highlightText(element, searchTerm) {
-        // Simple text highlighting (basic implementation)
-        const walker = document.createTreeWalker(
-            element,
-            NodeFilter.SHOW_TEXT,
-            null,
-            false
-        );
-
-        const textNodes = [];
-        let node;
-        while (node = walker.nextNode()) {
-            textNodes.push(node);
-        }
-
-        textNodes.forEach(textNode => {
-            const text = textNode.textContent;
-            const regex = new RegExp(`(${searchTerm})`, 'gi');
-            if (regex.test(text)) {
-                const highlightedText = text.replace(regex, '<mark>$1</mark>');
-                const span = document.createElement('span');
-                span.innerHTML = highlightedText;
-                textNode.parentNode.replaceChild(span, textNode);
-            }
-        });
-    }
-
-    removeHighlight(element) {
-        const marks = element.querySelectorAll('mark');
-        marks.forEach(mark => {
-            mark.outerHTML = mark.innerHTML;
-        });
-    }
-
-    showNoResultsMessage(show) {
-        let noResultsMsg = document.querySelector('.no-results-message');
-        
-        if (show && !noResultsMsg) {
-            noResultsMsg = document.createElement('div');
-            noResultsMsg.className = 'no-results-message text-center py-5';
-            noResultsMsg.innerHTML = `
-                <i class="fas fa-search fa-3x text-muted mb-3"></i>
-                <h4>No results found</h4>
-                <p class="text-muted">Try adjusting your search terms</p>
-            `;
-            
-            const container = document.querySelector('.search-results-container') || document.querySelector('.container');
-            if (container) {
-                container.appendChild(noResultsMsg);
-            }
-        } else if (!show && noResultsMsg) {
-            noResultsMsg.remove();
-        }
-    }
-}
 
 // =================================
 // LIVE CHAT INTEGRATION
@@ -1674,7 +1567,6 @@ class PerformanceMonitor {
             });
         }
 
-        console.log('Performance Metrics:', this.metrics);
     }
 }
 
@@ -1700,7 +1592,6 @@ class SkytronicLabsApp {
             this.components.formHandler = new FormHandler();
             this.components.faqAccordion = new FAQAccordion();
             this.components.backToTop = new BackToTop();
-            this.components.search = new Search();
             this.components.liveChat = new LiveChat();
             this.components.errorHandler = new ErrorHandler();
             this.components.performanceMonitor = new PerformanceMonitor();
@@ -1716,7 +1607,6 @@ class SkytronicLabsApp {
             this.handleInitialHashScroll();
             this.isInitialized = true;
 
-            console.log('Skytronic Labs App initialized successfully');
         } catch (error) {
             console.error('Failed to initialize Skytronic Labs App:', error);
         }
@@ -1785,10 +1675,8 @@ class SkytronicLabsApp {
     handleVisibilityChange() {
         if (document.hidden) {
             // Page is hidden
-            console.log('Page hidden');
         } else {
             // Page is visible
-            console.log('Page visible');
         }
     }
 

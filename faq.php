@@ -9,24 +9,16 @@ include 'includes/header.php';
     <!-- FAQ Hero Section -->
     <section class="faq-hero">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h1 class="page-title">Frequently Asked <span class="text-accent">Questions</span></h1>
-                    <p class="hero-subtitle">Find quick answers to the most common questions about our courses, pricing, job placement, and more</p>
-                    <div class="hero-search">
-                        <div class="search-box">
-                            <input type="text" id="faqSearch" name="faq_search" placeholder="Search for answers..." class="form-control" autocomplete="search">
-                            <button type="button" class="search-btn">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </div>
-                        <div class="search-suggestions">
-                            <span>Popular searches:</span>
-                            <a href="#pricing">Pricing</a>
-                            <a href="#job-placement">Job Placement</a>
-                            <a href="#refunds">Refunds</a>
-                            <a href="#prerequisites">Prerequisites</a>
-                        </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="faq-hero-content">
+                        <h1 class="page-title">Frequently Asked <span class="text-accent">Questions</span></h1>
+                        <p class="hero-subtitle">Find quick answers to the most common questions about our courses, pricing, job placement, and more</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="faq-hero-image">
+                        <img src="images/faq-hero.webp" alt="FAQ hero abstract illustration" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -90,8 +82,8 @@ include 'includes/header.php';
                                     <i class="fas fa-chevron-down"></i>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Skytronic Labs is a leading online technology education platform that offers comprehensive courses in web development, cybersecurity, AI/ML, cloud computing, and more. Founded in 2020 by former Google engineers, we've helped over 12,000 students transform their careers with industry-relevant skills and expert mentorship.</p>
-                                    <p>Our mission is to bridge the gap between traditional education and industry demands by providing hands-on, practical training that leads to real job opportunities. We maintain a 94% job placement rate and have partnerships with over 500 tech companies.</p>
+                                    <p>Skytronic Labs is an online technology education platform offering comprehensive courses in web development, cybersecurity, AI/ML, cloud computing, and more. Founded in 2020 by industry practitioners, we've helped thousands of learners build job‑ready skills with hands‑on mentorship.</p>
+                                    <p>Our mission is to bridge the gap between traditional education and workplace needs by providing practical training that leads to real outcomes. We focus on transparent metrics, portfolio projects, and support throughout the job search.</p>
                                 </div>
                             </div>
                             
@@ -103,12 +95,12 @@ include 'includes/header.php';
                                 <div class="faq-answer">
                                     <p>Several key factors set us apart:</p>
                                     <ul>
-                                        <li><strong>Industry Expert Instructors:</strong> Our teachers are senior professionals from Google, Microsoft, Amazon, and other top companies</li>
-                                        <li><strong>Project-Based Learning:</strong> You build real applications that go into your professional portfolio</li>
-                                        <li><strong>1-on-1 Mentorship:</strong> Personal guidance from industry professionals throughout your journey</li>
-                                        <li><strong>Career Services:</strong> Dedicated job placement assistance with a 94% success rate</li>
-                                        <li><strong>Live Curriculum:</strong> Content updated every 3 months to reflect current industry trends</li>
-                                        <li><strong>Community Focus:</strong> Active Discord community with 15,000+ students and alumni</li>
+                                        <li><strong>Expert Instructors:</strong> Courses taught by senior industry practitioners</li>
+                                        <li><strong>Project‑Based Learning:</strong> Real applications for your portfolio</li>
+                                        <li><strong>1‑on‑1 Mentorship:</strong> Personalized support at every step</li>
+                                        <li><strong>Career Services:</strong> Job‑readiness coaching: resume, portfolio, interview prep</li>
+                                        <li><strong>Live Curriculum:</strong> Regular content updates for current technologies</li>
+                                        <li><strong>Community:</strong> Active student and alumni community</li>
                                     </ul>
                                 </div>
                             </div>
@@ -119,15 +111,12 @@ include 'includes/header.php';
                                     <i class="fas fa-chevron-down"></i>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Skytronic Labs is accredited by ACCET (Accrediting Council for Continuing Education & Training) and maintains partnerships with:</p>
+                                    <p>We follow recognized standards for learning quality and data protection. We collaborate with employers and professional communities to keep programs current and support hiring.</p>
                                     <ul>
-                                        <li>500+ hiring partner companies including Google, Microsoft, Amazon, Netflix, and Spotify</li>
-                                        <li>CompTIA for cybersecurity certification preparation</li>
-                                        <li>AWS for cloud computing training and certification paths</li>
-                                        <li>Major universities for credit transfer programs</li>
-                                        <li>Professional organizations like IEEE and ACM</li>
+                                        <li>Outcomes‑oriented approach with verifiable learning results</li>
+                                        <li>Support for preparation toward industry exams and recognized standards</li>
+                                        <li>Data protection practices and internal security reviews</li>
                                     </ul>
-                                    <p>We're also SOC 2 compliant and ISO 27001 certified for data security and privacy protection.</p>
                                 </div>
                             </div>
                             
@@ -137,15 +126,7 @@ include 'includes/header.php';
                                     <i class="fas fa-chevron-down"></i>
                                 </div>
                                 <div class="faq-answer">
-                                    <p>Yes! We have transfer credit agreements with over 50 universities. Students can typically receive 3-12 credit hours depending on the course and institution. Popular transfer partners include:</p>
-                                    <ul>
-                                        <li>Arizona State University (ASU Online)</li>
-                                        <li>Southern New Hampshire University</li>
-                                        <li>University of Maryland Global Campus</li>
-                                        <li>Western Governors University</li>
-                                        <li>Purdue University Global</li>
-                                    </ul>
-                                    <p>Contact our academic partnerships team for specific transfer credit information for your institution.</p>
+                                    <p>We collaborate with educational organizations and certification centers. Credit eligibility and recognition depend on each institution’s policies and program rules. Contact our academic team — we’ll help with documentation and mapping of learning outcomes.</p>
                                 </div>
                             </div>
                         </div>
@@ -277,7 +258,7 @@ include 'includes/header.php';
                                     <p>It depends on the course you choose:</p>
                                     <div class="prerequisite-guide">
                                         <div class="prereq-item beginner">
-                                            <h4>🟢 Beginner-Friendly (No Experience Required)</h4>
+                                            <h4><i class="fas fa-seedling"></i> Beginner-Friendly (No Experience Required)</h4>
                                             <ul>
                                                 <li>Full-Stack Web Development</li>
                                                 <li>PHP & MySQL Development</li>
@@ -285,14 +266,14 @@ include 'includes/header.php';
                                             </ul>
                                         </div>
                                         <div class="prereq-item intermediate">
-                                            <h4>🟡 Some Programming Experience Recommended</h4>
+                                            <h4><i class="fas fa-lightbulb"></i> Some Programming Experience Recommended</h4>
                                             <ul>
                                                 <li>Advanced JavaScript (basic JS knowledge helpful)</li>
                                                 <li>Cloud Computing & DevOps (basic command line experience)</li>
                                             </ul>
                                         </div>
                                         <div class="prereq-item advanced">
-                                            <h4>🟠 Programming Background Required</h4>
+                                            <h4><i class="fas fa-code"></i> Programming Background Required</h4>
                                             <ul>
                                                 <li>AI & Machine Learning (Python basics or equivalent programming experience)</li>
                                             </ul>
@@ -587,7 +568,7 @@ include 'includes/header.php';
                                     <p>Our application process varies by course complexity:</p>
                                     <div class="application-requirements">
                                         <div class="req-level">
-                                            <h4>🟢 Open Enrollment (Most Courses)</h4>
+                                            <h4><i class="fas fa-unlock"></i> Open Enrollment (Most Courses)</h4>
                                             <ul>
                                                 <li>Simple registration form</li>
                                                 <li>No technical assessment required</li>
@@ -596,7 +577,7 @@ include 'includes/header.php';
                                             <small>Applies to: Web Development, PHP/MySQL, Cybersecurity</small>
                                         </div>
                                         <div class="req-level">
-                                            <h4>🟡 Basic Assessment</h4>
+                                            <h4><i class="fas fa-clipboard-check"></i> Basic Assessment</h4>
                                             <ul>
                                                 <li>Short technical quiz (15 minutes)</li>
                                                 <li>Background questionnaire</li>
@@ -605,7 +586,7 @@ include 'includes/header.php';
                                             <small>Applies to: Advanced JavaScript, Cloud/DevOps</small>
                                         </div>
                                         <div class="req-level">
-                                            <h4>🟠 Application Review</h4>
+                                            <h4><i class="fas fa-file-alt"></i> Application Review</h4>
                                             <ul>
                                                 <li>Technical assessment (30 minutes)</li>
                                                 <li>Brief interview with instructor</li>
@@ -650,7 +631,7 @@ include 'includes/header.php';
                                     <p>Minimum system requirements for optimal learning experience:</p>
                                     <div class="tech-requirements">
                                         <div class="req-category">
-                                            <h4>🖥️ Computer Specifications</h4>
+                                            <h4><i class="fas fa-desktop"></i> Computer Specifications</h4>
                                             <ul>
                                                 <li><strong>Operating System:</strong> Windows 10+, macOS 10.14+, or Linux Ubuntu 18+</li>
                                                 <li><strong>Processor:</strong> Intel i5 / AMD Ryzen 5 or equivalent (minimum dual-core)</li>
@@ -660,7 +641,7 @@ include 'includes/header.php';
                                             </ul>
                                         </div>
                                         <div class="req-category">
-                                            <h4>🌐 Internet & Browser</h4>
+                                            <h4><i class="fas fa-wifi"></i> Internet & Browser</h4>
                                             <ul>
                                                 <li><strong>Internet Speed:</strong> 5 Mbps minimum, 25 Mbps recommended</li>
                                                 <li><strong>Browser:</strong> Chrome 90+, Firefox 88+, Safari 14+, or Edge 90+</li>
@@ -669,7 +650,7 @@ include 'includes/header.php';
                                             </ul>
                                         </div>
                                         <div class="req-category">
-                                            <h4>💻 Software (Provided Free)</h4>
+                                            <h4><i class="fas fa-laptop-code"></i> Software (Provided Free)</h4>
                                             <ul>
                                                 <li><strong>Code Editor:</strong> Visual Studio Code (free)</li>
                                                 <li><strong>Version Control:</strong> Git (free)</li>
@@ -708,7 +689,7 @@ include 'includes/header.php';
                                     <p>Yes! All necessary software and cloud access is included in your course fee:</p>
                                     <div class="included-software">
                                         <div class="software-category">
-                                            <h4>🆓 Free Software (Always Free)</h4>
+                                            <h4><i class="fas fa-gift"></i> Free Software (Always Free)</h4>
                                             <ul>
                                                 <li>Visual Studio Code</li>
                                                 <li>Git and GitHub</li>
@@ -718,7 +699,7 @@ include 'includes/header.php';
                                             </ul>
                                         </div>
                                         <div class="software-category">
-                                            <h4>💳 Included Licenses</h4>
+                                            <h4><i class="fas fa-id-badge"></i> Included Licenses</h4>
                                             <ul>
                                                 <li>JetBrains IDEs (1-year student license)</li>
                                                 <li>Adobe Creative Suite (if needed for course)</li>
@@ -727,7 +708,7 @@ include 'includes/header.php';
                                             </ul>
                                         </div>
                                         <div class="software-category">
-                                            <h4>☁️ Cloud Credits</h4>
+                                            <h4><i class="fas fa-cloud"></i> Cloud Credits</h4>
                                             <ul>
                                                 <li>AWS: $200 in credits</li>
                                                 <li>Microsoft Azure: $150 in credits</li>
@@ -773,7 +754,7 @@ include 'includes/header.php';
                                     <p>Our comprehensive career services include:</p>
                                     <div class="career-services">
                                         <div class="service-category">
-                                            <h4>📝 Resume & Portfolio Optimization</h4>
+                                            <h4><i class="fas fa-file-signature"></i> Resume & Portfolio Optimization</h4>
                                             <ul>
                                                 <li>Professional resume review and rewriting</li>
                                                 <li>GitHub portfolio optimization</li>
@@ -782,7 +763,7 @@ include 'includes/header.php';
                                             </ul>
                                         </div>
                                         <div class="service-category">
-                                            <h4>🎯 Job Search Strategy</h4>
+                                            <h4><i class="fas fa-bullseye"></i> Job Search Strategy</h4>
                                             <ul>
                                                 <li>Personalized job search plan</li>
                                                 <li>Company research and targeting</li>
@@ -791,7 +772,7 @@ include 'includes/header.php';
                                             </ul>
                                         </div>
                                         <div class="service-category">
-                                            <h4>💼 Interview Preparation</h4>
+                                            <h4><i class="fas fa-user-tie"></i> Interview Preparation</h4>
                                             <ul>
                                                 <li>Technical interview coaching</li>
                                                 <li>Behavioral interview preparation</li>
@@ -800,7 +781,7 @@ include 'includes/header.php';
                                             </ul>
                                         </div>
                                         <div class="service-category">
-                                            <h4>🤝 Direct Job Placement</h4>
+                                            <h4><i class="fas fa-handshake"></i> Direct Job Placement</h4>
                                             <ul>
                                                 <li>Introductions to 500+ hiring partners</li>
                                                 <li>Exclusive job opportunities</li>
