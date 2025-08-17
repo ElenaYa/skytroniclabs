@@ -15,7 +15,7 @@ include 'includes/header.php';
                     <p class="hero-subtitle">Find quick answers to the most common questions about our courses, pricing, job placement, and more</p>
                     <div class="hero-search">
                         <div class="search-box">
-                            <input type="text" id="faqSearch" placeholder="Search for answers..." class="form-control">
+                            <input type="text" id="faqSearch" name="faq_search" placeholder="Search for answers..." class="form-control" autocomplete="search">
                             <button type="button" class="search-btn">
                                 <i class="fas fa-search"></i>
                             </button>

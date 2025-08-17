@@ -634,42 +634,59 @@ class Animations {
         // Page load animations
         this.timeline = gsap.timeline({ paused: true });
         
-        // Animate hero content
-        this.timeline
-            .from('.hero-title', {
+        // Animate hero content (guard per selector so pages without hero don't warn)
+        const heroTitle = document.querySelector('.hero-title');
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        const heroCtas = document.querySelectorAll('.hero-cta .btn');
+        const heroStatItems = document.querySelectorAll('.hero-stats .stat-item');
+
+        if (heroTitle) {
+            this.timeline.from(heroTitle, {
                 duration: config.animations.duration.medium,
                 y: 50,
                 opacity: 0,
                 ease: config.animations.ease.smooth,
                 immediateRender: false
-            })
-            .from('.hero-subtitle', {
+            });
+        }
+
+        if (heroSubtitle) {
+            this.timeline.from(heroSubtitle, {
                 duration: config.animations.duration.medium,
                 y: 30,
                 opacity: 0,
                 ease: config.animations.ease.smooth,
                 immediateRender: false
-            }, '-=0.3')
-            .from('.hero-cta .btn', {
+            }, heroTitle ? '-=0.3' : 0);
+        }
+
+        if (heroCtas.length > 0) {
+            this.timeline.from(heroCtas, {
                 duration: config.animations.duration.fast,
                 y: 20,
                 opacity: 0,
                 stagger: 0.1,
                 ease: config.animations.ease.smooth,
                 immediateRender: false
-            }, '-=0.2')
-            .from('.hero-stats .stat-item', {
+            }, (heroTitle || heroSubtitle) ? '-=0.2' : 0);
+        }
+
+        if (heroStatItems.length > 0) {
+            this.timeline.from(heroStatItems, {
                 duration: config.animations.duration.fast,
                 y: 20,
                 opacity: 0,
                 stagger: 0.1,
                 ease: config.animations.ease.bounce,
                 immediateRender: false
-            }, '-=0.1');
+            }, (heroTitle || heroSubtitle || heroCtas.length) ? '-=0.1' : 0);
+        }
 
         // Animate floating cards
         const playFloating = () => {
-            gsap.from('.floating-card', {
+            const cards = document.querySelectorAll('.floating-card');
+            if (cards.length === 0) return;
+            gsap.from(cards, {
                 duration: config.animations.duration.slow,
                 y: 100,
                 opacity: 0,
@@ -677,12 +694,16 @@ class Animations {
                 ease: config.animations.ease.elastic,
                 delay: 0.5,
                 immediateRender: false,
-                onComplete: () => gsap.set('.floating-card', { clearProps: 'transform,opacity' })
+                onComplete: () => {
+                    if (cards.length > 0) {
+                        gsap.set(cards, { clearProps: 'transform,opacity' });
+                    }
+                }
             });
         };
 
         const startAnimations = () => {
-            if (this.timeline && this.timeline.paused()) {
+            if (this.timeline && this.timeline.paused() && this.timeline.getChildren().length > 0) {
                 this.timeline.play(0);
             }
             playFloating();
