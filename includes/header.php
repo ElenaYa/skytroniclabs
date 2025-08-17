@@ -19,10 +19,9 @@
     <title><?php echo isset($TITLE) ? $TITLE : 'Skytronic Labs - Modern Tech Education Platform'; ?></title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -135,9 +134,9 @@
                 <!-- Logo -->
                 <a class="navbar-brand" href="index.php">
                     <div class="logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-atom"></i>
-                        </div>
+                      
+                            <img src="images/logo.webp" alt="Skytronic Labs" width="48" height="48" loading="eager" />
+                        
                         <div class="logo-text">
                             <span class="logo-name">Skytronic</span>
                             <span class="logo-subtitle">Labs</span>
@@ -244,9 +243,8 @@
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
             <div class="loading-logo">
-                <div class="logo-icon">
-                    <i class="fas fa-atom"></i>
-                </div>
+                   <img src="images/logo.webp" alt="Skytronic Labs" width="68" height="68" loading="eager" />
+               
             </div>
             <div class="loading-text">Loading Skytronic Labs...</div>
             <div class="loading-bar">

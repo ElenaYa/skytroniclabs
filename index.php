@@ -9,6 +9,7 @@ include 'includes/header.php';
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-bg-animation"></div>
+        <div class="hero-clip-image"></div>
         <div class="container">
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
@@ -276,23 +277,23 @@ include 'includes/header.php';
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-12">
-                    <h2 class="section-title">Success Stories</h2>
-                    <p class="section-subtitle">Real students, real results, real career transformations</p>
+                    <h2 class="section-title">Learner Outcomes</h2>
+                    <p class="section-subtitle">Measurable results from real projects and guided practice</p>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="success-card">
                         <div class="success-image">
-                            <img src="images/testimonial-abstract-1.webp" alt="Sarah Johnson">
+                            <img src="images/testimonial-abstract-1.webp" alt="Abstract student success concept: upward arrow woven into geometric grid, graduation cap silhouette formed by lines, soft green accent, no people faces.">
                         </div>
                         <div class="success-content">
-                            <h4>Sarah Johnson</h4>
-                            <p class="success-role">Full-Stack Developer at Google</p>
-                            <blockquote>"Skytronic Labs transformed my career. I went from retail management to landing a $120K developer role at Google in just 8 months. The hands-on projects and mentorship were invaluable."</blockquote>
+                            <h4>Career Transition</h4>
+                            <p class="success-role">Pathway from non-tech role to software</p>
+                            <blockquote>Career switch from retail to software in 8 months; portfolio of 6 projects.</blockquote>
                             <div class="success-stats">
-                                <span class="stat">Career change: 8 months</span>
-                                <span class="stat">Salary increase: 240%</span>
+                                <span class="stat">Time to switch: 8 months</span>
+                                <span class="stat">Portfolio: 6 projects</span>
                             </div>
                         </div>
                     </div>
@@ -300,15 +301,15 @@ include 'includes/header.php';
                 <div class="col-lg-4">
                     <div class="success-card">
                         <div class="success-image">
-                            <img src="images/testimonial-abstract-2.webp" alt="Mike Chen">
+                            <img src="images/testimonial-abstract-2.webp" alt="Career advancement concept: pathway made of circuit lines leading to bright horizon, minimal icons of skills, light theme, green accent, no people.">
                         </div>
                         <div class="success-content">
-                            <h4>Mike Chen</h4>
-                            <p class="success-role">Cybersecurity Analyst at Microsoft</p>
-                            <blockquote>"The cybersecurity course was comprehensive and practical. I earned my CISSP certification and immediately got hired at Microsoft. The instructors are world-class."</blockquote>
+                            <h4>Advancement & Certification</h4>
+                            <p class="success-role">Security track with certification</p>
+                            <blockquote>Advanced from entry level to analyst with skills validation and a focused study plan.</blockquote>
                             <div class="success-stats">
-                                <span class="stat">Certification: CISSP</span>
-                                <span class="stat">Time to hire: 2 weeks</span>
+                                <span class="stat">Certification earned</span>
+                                <span class="stat">Time to offer: 2 weeks</span>
                             </div>
                         </div>
                     </div>
@@ -316,15 +317,15 @@ include 'includes/header.php';
                 <div class="col-lg-4">
                     <div class="success-card">
                         <div class="success-image">
-                            <img src="images/testimonial-abstract-3.webp" alt="Emily Rodriguez">
+                            <img src="images/testimonial-abstract-3.webp" alt="AI portfolio success concept: stacked cards with generic charts and model blocks, gentle shadows, geometric dividers, green highlight, no brands.">
                         </div>
                         <div class="success-content">
-                            <h4>Emily Rodriguez</h4>
-                            <p class="success-role">ML Engineer at Tesla</p>
-                            <blockquote>"The AI/ML course opened doors I never imagined. Working with TensorFlow and building real AI applications prepared me perfectly for my dream job at Tesla."</blockquote>
+                            <h4>AI Portfolio Growth</h4>
+                            <p class="success-role">ML/AI project pathway</p>
+                            <blockquote>Built a practical portfolio with model demos and analytics dashboards; interviews unlocked by showcasing skills.</blockquote>
                             <div class="success-stats">
-                                <span class="stat">Dream job achieved</span>
                                 <span class="stat">Portfolio: 5 AI projects</span>
+                                <span class="stat">Outcome: Interview invites</span>
                             </div>
                         </div>
                     </div>

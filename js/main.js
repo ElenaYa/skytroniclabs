@@ -640,27 +640,31 @@ class Animations {
                 duration: config.animations.duration.medium,
                 y: 50,
                 opacity: 0,
-                ease: config.animations.ease.smooth
+                ease: config.animations.ease.smooth,
+                immediateRender: false
             })
             .from('.hero-subtitle', {
                 duration: config.animations.duration.medium,
                 y: 30,
                 opacity: 0,
-                ease: config.animations.ease.smooth
+                ease: config.animations.ease.smooth,
+                immediateRender: false
             }, '-=0.3')
             .from('.hero-cta .btn', {
                 duration: config.animations.duration.fast,
                 y: 20,
                 opacity: 0,
                 stagger: 0.1,
-                ease: config.animations.ease.smooth
+                ease: config.animations.ease.smooth,
+                immediateRender: false
             }, '-=0.2')
             .from('.hero-stats .stat-item', {
                 duration: config.animations.duration.fast,
                 y: 20,
                 opacity: 0,
                 stagger: 0.1,
-                ease: config.animations.ease.bounce
+                ease: config.animations.ease.bounce,
+                immediateRender: false
             }, '-=0.1');
 
         // Animate floating cards
@@ -671,7 +675,9 @@ class Animations {
                 opacity: 0,
                 stagger: 0.2,
                 ease: config.animations.ease.elastic,
-                delay: 0.5
+                delay: 0.5,
+                immediateRender: false,
+                onComplete: () => gsap.set('.floating-card', { clearProps: 'transform,opacity' })
             });
         };
 
@@ -707,7 +713,8 @@ class Animations {
                 start: 'top 80%',
                 end: 'bottom 20%',
                 onEnter: () => this.animateSection(section),
-                onEnterBack: () => this.animateSection(section)
+                onEnterBack: () => this.animateSection(section),
+                once: true
             });
             
             this.scrollTriggers.push(st);
@@ -725,7 +732,9 @@ class Animations {
                         y: 50,
                         opacity: 0,
                         ease: config.animations.ease.smooth,
-                        delay: index * 0.1
+                        delay: index * 0.1,
+                        immediateRender: false,
+                        onComplete: () => gsap.set(card, { clearProps: 'transform,opacity' })
                     });
                 }
             });
@@ -744,7 +753,9 @@ class Animations {
                         duration: config.animations.duration.medium,
                         y: 30,
                         opacity: 0,
-                        ease: config.animations.ease.smooth
+                        ease: config.animations.ease.smooth,
+                        immediateRender: false,
+                        onComplete: () => gsap.set(title, { clearProps: 'transform,opacity' })
                     });
                 }
             });
@@ -832,7 +843,9 @@ class Animations {
             y: 30,
             opacity: 0,
             stagger: 0.1,
-            ease: config.animations.ease.smooth
+            ease: config.animations.ease.smooth,
+            immediateRender: false,
+            onComplete: () => gsap.set(elements, { clearProps: 'transform,opacity' })
         });
     }
 
@@ -1679,6 +1692,7 @@ class SkytronicLabsApp {
             });
 
             this.setupGlobalEventListeners();
+            this.handleInitialHashScroll();
             this.isInitialized = true;
 
             console.log('Skytronic Labs App initialized successfully');
@@ -1701,6 +1715,38 @@ class SkytronicLabsApp {
         // Handle online/offline status
         window.addEventListener('online', () => this.handleOnlineStatus(true));
         window.addEventListener('offline', () => this.handleOnlineStatus(false));
+
+        // Smooth scroll for same-page hash links anywhere in the document
+        document.addEventListener('click', (e) => {
+            const anchor = e.target.closest('a[href^="#"]');
+            if (!anchor) return;
+            const href = anchor.getAttribute('href');
+            if (!href || href.length <= 1) return;
+            const target = document.querySelector(href);
+            if (target) {
+                e.preventDefault();
+                Utils.scrollTo(target, 90);
+            }
+        });
+    }
+
+    handleInitialHashScroll() {
+        const scrollToHash = () => {
+            const hash = window.location.hash;
+            if (!hash) return;
+            const target = document.querySelector(hash);
+            if (!target) return;
+            // slight defer to allow layout/fonts to settle
+            setTimeout(() => Utils.scrollTo(target, 90), 50);
+        };
+
+        if (document.readyState === 'complete') {
+            scrollToHash();
+        } else {
+            window.addEventListener('load', scrollToHash, { once: true });
+        }
+        document.addEventListener('skytronic:loadingHidden', scrollToHash, { once: true });
+        window.addEventListener('hashchange', () => scrollToHash());
     }
 
     handleResize() {

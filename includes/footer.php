@@ -40,9 +40,7 @@
                         <div class="footer-section">
                             <div class="footer-logo">
                                 <div class="logo">
-                                    <div class="logo-icon">
-                                        <i class="fas fa-atom"></i>
-                                    </div>
+                                    <img src="images/logo.webp" alt="Skytronic Labs" width="68" height="68" loading="lazy" />
                                     <div class="logo-text">
                                         <span class="logo-name">Skytronic</span>
                                         <span class="logo-subtitle">Labs</span>
@@ -142,50 +140,6 @@
                     </div>
                 </div>
 
-                <!-- Social Media & Certifications -->
-                <div class="row mt-5">
-                    <div class="col-lg-6">
-                        <div class="footer-social">
-                            <h5>Follow Us</h5>
-                            <div class="social-links">
-                                <a href="#" class="social-link" aria-label="Twitter">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="social-link" aria-label="LinkedIn">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="social-link" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" class="social-link" aria-label="YouTube">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
-                                <a href="#" class="social-link" aria-label="Discord">
-                                    <i class="fab fa-discord"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="footer-certifications">
-                            <h5>Accreditations & Partners</h5>
-                            <div class="certification-badges">
-                                <div class="cert-badge">
-                                    <i class="fas fa-certificate"></i>
-                                    <span>ACCET Accredited</span>
-                                </div>
-                                <div class="cert-badge">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>SOC 2 Compliant</span>
-                                </div>
-                                <div class="cert-badge">
-                                    <i class="fas fa-award"></i>
-                                    <span>ISO 27001</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 

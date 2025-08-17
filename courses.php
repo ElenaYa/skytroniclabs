@@ -123,7 +123,7 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#" class="btn btn-primary btn-lg me-3">
+                            <a href="#webdev" class="btn btn-primary btn-lg me-3">
                                 <i class="fas fa-play"></i>
                                 Enroll Now
                             </a>
@@ -268,7 +268,7 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#" class="btn btn-primary btn-lg me-3">Enroll Now</a>
+                            <a href="#javascript" class="btn btn-primary btn-lg me-3">Enroll Now</a>
                             <a href="#" class="btn btn-outline-primary btn-lg">Course Details</a>
                         </div>
                     </div>
@@ -407,7 +407,7 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#" class="btn btn-primary btn-lg me-3">Enroll Now</a>
+                            <a href="#php" class="btn btn-primary btn-lg me-3">Enroll Now</a>
                             <a href="#" class="btn btn-outline-primary btn-lg">Watch Demo</a>
                         </div>
                     </div>
@@ -566,7 +566,7 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#" class="btn btn-primary btn-lg me-3">Enroll Now</a>
+                            <a href="#cybersecurity" class="btn btn-primary btn-lg me-3">Enroll Now</a>
                             <a href="#" class="btn btn-outline-primary btn-lg">Lab Preview</a>
                         </div>
                     </div>
@@ -724,7 +724,7 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#" class="btn btn-primary btn-lg me-3">Enroll Now</a>
+                            <a href="#cloud" class="btn btn-primary btn-lg me-3">Enroll Now</a>
                             <a href="#" class="btn btn-outline-primary btn-lg">AWS Lab Access</a>
                         </div>
                     </div>
@@ -893,7 +893,7 @@ include 'includes/header.php';
                         </div>
                         
                         <div class="course-actions">
-                            <a href="#" class="btn btn-primary btn-lg me-3">Enroll Now</a>
+                            <a href="#ai-ml" class="btn btn-primary btn-lg me-3">Enroll Now</a>
                             <a href="#" class="btn btn-outline-primary btn-lg">AI Demo</a>
                         </div>
                     </div>

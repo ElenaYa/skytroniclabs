@@ -1,3 +1,98 @@
+  /* ===============================
+     LEARNING EXPERIENCE
+  =============================== */
+  .learning-experience {
+    position: relative;
+    z-index: 1;
+  }
+  .experience-content .experience-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+  .experience-feature {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+    background: var(--color-white);
+    border: 1px solid var(--color-stroke);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+  }
+  .experience-feature .feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(0,192,115,.12) 100%);
+    color: var(--color-accent);
+    font-size: 1.25rem;
+  }
+  .experience-feature .feature-content h4 { margin: 0 0 0.25rem 0; font-weight: 700; }
+  .experience-feature .feature-content p { margin: 0; color: var(--color-text-muted); }
+
+  .experience-demo .demo-window {
+    border: 1px solid var(--color-stroke);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    background: var(--color-white);
+  }
+  .demo-window .window-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    background: var(--color-bg-soft);
+    border-bottom: 1px solid var(--color-stroke);
+  }
+  .window-controls { display: flex; gap: 6px; }
+  .window-controls .control { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .window-controls .red { background: #ff5f56; }
+  .window-controls .yellow { background: #ffbd2e; }
+  .window-controls .green { background: #27c93f; }
+  .window-title { color: var(--color-text-muted); font-size: 0.9rem; }
+  .demo-window .window-content { display: grid; grid-template-columns: 1fr 1fr; }
+  .code-editor { padding: var(--spacing-md); background: #0e1116; color: #e6edf3; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  .line-numbers { float: left; opacity: .6; margin-right: var(--spacing-md); }
+  .code-content { white-space: pre-wrap; }
+  .keyword { color: #79c0ff; }
+  .function { color: #d2a8ff; }
+  .parameter { color: #ffa657; }
+  .method { color: #7ee787; }
+  .number { color: #ff7b72; }
+  .comment { color: #8b949e; }
+  .output-panel { padding: var(--spacing-md); background: var(--color-bg-soft); border-left: 1px solid var(--color-stroke); }
+  .output-header { font-weight: 700; margin-bottom: 0.5rem; }
+  .success { color: var(--color-accent); }
+
+  @media (max-width: 992px) {
+    .demo-window .window-content { grid-template-columns: 1fr; }
+    .output-panel { border-left: none; border-top: 1px solid var(--color-stroke); }
+  }
+  /* Anchor offset for fixed header when using hash links */
+  .course-section { scroll-margin-top: 90px; }
+  /* Sections - titles and layout */
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+  }
+  .section-subtitle {
+    color: var(--color-muted);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .features-section {
+    position: relative;
+    z-index: 1;
+  }
 /* Skytronic Labs - Main Stylesheet */
 /* Modern EdTech Platform Design */
 
@@ -475,9 +570,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-white);
-    font-size: 1.25rem;
+    overflow: hidden;
     transition: transform var(--transition-fast);
+  }
+  .logo-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
   }
   
   .logo:hover .logo-icon {
@@ -690,6 +790,22 @@
     opacity: 0.6;
     z-index: -1;
   }
+
+  /* Hero clipped decorative layer under header */
+  .hero-clip-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1100px, 96vw);
+    height: 30vh;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(0,167,111,0.22), rgba(0,167,111,0.12) 60%, transparent 100%);
+    filter: blur(1.5px) saturate(115%);
+    /* Regular hexagon */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
   
   .hero-bg-animation::before {
     content: '';
@@ -767,6 +883,8 @@
   .hero-image img {
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-xl);
+    position: relative;
+    z-index: 1;
   }
   
   /* Floating Cards */
@@ -781,6 +899,10 @@
     gap: 0.75rem;
     font-weight: 500;
     animation: floatCard 4s ease-in-out infinite;
+    z-index: 2;
+    pointer-events: auto;
+    backdrop-filter: blur(2px);
+    background: rgba(255,255,255,0.92);
   }
   
   .floating-card i {
@@ -789,20 +911,20 @@
   }
   
   .card-1 {
-    top: 20%;
-    right: -10%;
+    top: 18%;
+    right: -4%;
     animation-delay: 0s;
   }
   
   .card-2 {
-    top: 60%;
-    left: -15%;
+    top: 58%;
+    left: -4%;
     animation-delay: 1.5s;
   }
   
   .card-3 {
-    bottom: 10%;
-    right: 10%;
+    bottom: 12%;
+    right: 6%;
     animation-delay: 3s;
   }
   
@@ -956,6 +1078,100 @@
   
   .course-card:hover .course-image img {
     transform: scale(1.05);
+  }
+
+  /* ===============================
+     SUCCESS STORIES
+  =============================== */
+  .success-stories {
+    position: relative;
+    z-index: 1;
+  }
+  .success-card {
+    background: var(--color-white);
+    border: 1px solid var(--color-stroke);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    height: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+  }
+  .success-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-accent);
+  }
+  .success-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+  .success-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform var(--transition-slow), filter var(--transition-fast);
+  }
+  .success-card:hover .success-image img {
+    transform: scale(1.06);
+  }
+  .success-content {
+    padding: var(--spacing-xl);
+  }
+  .success-content h4 {
+    margin: 0 0 0.25rem 0;
+    font-weight: 800;
+    color: var(--color-text);
+  }
+  .success-role {
+    color: var(--color-muted);
+    margin-bottom: 0.75rem;
+  }
+  .success-content blockquote {
+    margin: 0;
+    color: var(--color-text);
+  }
+  .success-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  .success-stats .stat {
+    background: var(--color-accent-soft);
+    padding: 0.375rem 0.625rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .career-stats .career-stat {
+    background: var(--color-white);
+    border: 1px solid var(--color-stroke);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+  }
+  .career-stats .stat-number {
+    display: block;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-accent);
+  }
+  .career-stats .stat-label {
+    display: block;
+    color: var(--color-muted);
+    font-weight: 500;
+  }
+
+  @media (max-width: 992px) {
+    .success-image { height: 200px; }
+    .success-content { padding: var(--spacing-lg); }
+  }
+  @media (max-width: 768px) {
+    .success-image { height: 180px; }
+    .success-content { text-align: center; }
+    .success-stats { justify-content: center; }
   }
   
   .course-level {
@@ -1368,8 +1584,8 @@
   }
   
   .loading-logo .logo-icon {
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto var(--spacing-lg);
     animation: loadingPulse 2s ease-in-out infinite;
   }
@@ -1650,7 +1866,7 @@
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 768px){
     /* Navigation (mobile) */
     #navbarNav.collapse {
       display: block !important;
