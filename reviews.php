@@ -8,9 +8,13 @@ include 'includes/header.php';
 <main id="main-content">
     <!-- Reviews Hero Section -->
     <section class="reviews-hero">
+        <div class="hero-background">
+            <img src="images/reviews-hero-bg.webp" alt="" aria-hidden="true">
+            <div class="overlay"></div>
+        </div>
         <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
                     <h1 class="page-title">Real Students, Real <span class="text-accent">Success Stories</span></h1>
                     <p class="hero-subtitle">Discover how our students transformed their careers and achieved their tech dreams with Skytronic Labs</p>
                     <div class="hero-rating">
@@ -59,18 +63,18 @@ include 'includes/header.php';
                 </div>
             </div>
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="story-card featured">
                         <div class="story-header">
                             <div class="student-photo">
-                                <img src="images/student-sarah.webp" alt="Sarah Johnson">
+                                <img src="images/student-sarah.webp" alt="Student Graduate">
                                 <div class="company-badge">
-                                    <img src="images/company-google.webp" alt="Google">
+                                    <div class="badge-text">TechCorp</div>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h3>Sarah Johnson</h3>
-                                <p class="current-role">Senior Full-Stack Developer at Google</p>
+                                <h3>Student A</h3>
+                                <p class="current-role">Senior Full-Stack Developer at Leading Tech Company</p>
                                 <p class="previous-role">Former: Retail Store Manager</p>
                             </div>
                         </div>
@@ -90,13 +94,13 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             <blockquote>
-                                "I never imagined I could transition from retail management to working at Google. Skytronic Labs didn't just teach me to code – they transformed my entire mindset. The hands-on projects, incredible mentorship, and career support made all the difference. Today, I'm leading a team of 12 developers and loving every minute of it."
+                                "I never imagined I could transition from retail management to working at a major tech company. Skytronic Labs didn't just teach me to code – they transformed my entire mindset. The hands-on projects, incredible mentorship, and career support made all the difference. Today, I'm leading a team of 12 developers and loving every minute of it."
                             </blockquote>
                             <div class="story-highlights">
                                 <h4>Journey Highlights:</h4>
                                 <ul>
                                     <li>Built 8 portfolio projects during the course</li>
-                                    <li>Received 1-on-1 mentorship from Google engineer</li>
+                                    <li>Received 1-on-1 mentorship from industry expert</li>
                                     <li>Got hired 2 weeks after course completion</li>
                                     <li>Promoted to senior role within 18 months</li>
                                 </ul>
@@ -117,18 +121,18 @@ include 'includes/header.php';
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="story-card featured">
                         <div class="story-header">
                             <div class="student-photo">
-                                <img src="images/student-marcus.webp" alt="Marcus Chen">
+                                <img src="images/student-marcus.webp" alt="Student Graduate">
                                 <div class="company-badge">
-                                    <img src="images/company-microsoft.webp" alt="Microsoft">
+                                    <div class="badge-text">CloudSys</div>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h3>Marcus Chen</h3>
-                                <p class="current-role">Cybersecurity Architect at Microsoft</p>
+                                <h3>Student B</h3>
+                                <p class="current-role">Cybersecurity Architect at Major Cloud Provider</p>
                                 <p class="previous-role">Former: College Graduate (Unemployed)</p>
                             </div>
                         </div>
@@ -148,7 +152,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             <blockquote>
-                                "Fresh out of college with a computer science degree, I couldn't find a job anywhere. The cybersecurity course at Skytronic Labs gave me the practical skills employers actually wanted. The hands-on labs, real-world scenarios, and certification prep were exactly what I needed. Now I'm protecting Microsoft's cloud infrastructure!"
+                                "Fresh out of college with a computer science degree, I couldn't find a job anywhere. The cybersecurity course at Skytronic Labs gave me the practical skills employers actually wanted. The hands-on labs, real-world scenarios, and certification prep were exactly what I needed. Now I'm protecting enterprise cloud infrastructure!"
                             </blockquote>
                             <div class="story-highlights">
                                 <h4>Achievement Milestones:</h4>
@@ -175,18 +179,18 @@ include 'includes/header.php';
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="story-card featured">
                         <div class="story-header">
                             <div class="student-photo">
-                                <img src="images/student-priya.webp" alt="Priya Patel">
+                                <img src="images/student-priya.webp" alt="Student Graduate">
                                 <div class="company-badge">
-                                    <img src="images/company-tesla.webp" alt="Tesla">
+                                    <div class="badge-text">AutoTech</div>
                                 </div>
                             </div>
                             <div class="student-info">
-                                <h3>Priya Patel</h3>
-                                <p class="current-role">ML Engineer at Tesla</p>
+                                <h3>Student C</h3>
+                                <p class="current-role">ML Engineer at Leading Automotive Company</p>
                                 <p class="previous-role">Former: High School Math Teacher</p>
                             </div>
                         </div>
@@ -206,7 +210,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             <blockquote>
-                                "Teaching high school math for 10 years, I felt stuck. The AI/ML course opened up a whole new world. The instructors were phenomenal, the projects were challenging, and the career support was unmatched. Now I'm working on autonomous vehicle technology at Tesla – it feels like science fiction!"
+                                "Teaching high school math for 10 years, I felt stuck. The AI/ML course opened up a whole new world. The instructors were phenomenal, the projects were challenging, and the career support was unmatched. Now I'm working on autonomous vehicle technology – it feels like science fiction!"
                             </blockquote>
                             <div class="story-highlights">
                                 <h4>Technical Achievements:</h4>
@@ -214,7 +218,7 @@ include 'includes/header.php';
                                     <li>Built 6 AI applications including computer vision systems</li>
                                     <li>Published research paper on neural network optimization</li>
                                     <li>Contributed to open-source TensorFlow projects</li>
-                                    <li>Leading Tesla's perception team for self-driving cars</li>
+                                    <li>Leading perception team for autonomous vehicle development</li>
                                 </ul>
                             </div>
                         </div>
@@ -262,11 +266,11 @@ include 'includes/header.php';
                         <div class="review-card">
                             <div class="review-header">
                                 <div class="reviewer-info">
-                                    <img src="images/reviewer-1.webp" alt="David Kim">
+                                    <img src="images/reviewer-1.webp" alt="Course Graduate">
                                     <div class="reviewer-details">
-                                        <h4>David Kim</h4>
+                                        <h4>Course Graduate</h4>
                                         <p>JavaScript Course Graduate</p>
-                                        <p>Now: Senior Developer at Spotify</p>
+                                        <p>Now: Senior Developer at Music Streaming Platform</p>
                                     </div>
                                 </div>
                                 <div class="review-rating">
@@ -281,7 +285,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             <div class="review-content">
-                                <p>"The course content is absolutely top-tier. Every module builds perfectly on the previous one, and the real-world projects make everything click. I especially loved the advanced React patterns section – it's exactly what I use daily at Spotify. The instructors clearly know their stuff and stay current with industry trends."</p>
+                                <p>"The course content is absolutely top-tier. Every module builds perfectly on the previous one, and the real-world projects make everything click. I especially loved the advanced React patterns section – it's exactly what I use daily at work. The instructors clearly know their stuff and stay current with industry trends."</p>
                             </div>
                             <div class="review-footer">
                                 <div class="helpful-votes">
@@ -294,11 +298,11 @@ include 'includes/header.php';
                         <div class="review-card">
                             <div class="review-header">
                                 <div class="reviewer-info">
-                                    <img src="images/reviewer-2.webp" alt="Elena Rodriguez">
+                                    <img src="images/reviewer-2.webp" alt="Course Graduate">
                                     <div class="reviewer-details">
-                                        <h4>Elena Rodriguez</h4>
+                                        <h4>Course Graduate</h4>
                                         <p>Full-Stack Course Graduate</p>
-                                        <p>Now: Lead Developer at Airbnb</p>
+                                        <p>Now: Lead Developer at Travel Platform</p>
                                     </div>
                                 </div>
                                 <div class="review-rating">
@@ -337,11 +341,11 @@ include 'includes/header.php';
                         <div class="review-card">
                             <div class="review-header">
                                 <div class="reviewer-info">
-                                    <img src="images/reviewer-3.webp" alt="James Wright">
+                                    <img src="images/reviewer-3.webp" alt="Course Graduate">
                                     <div class="reviewer-details">
-                                        <h4>James Wright</h4>
+                                        <h4>Course Graduate</h4>
                                         <p>Cybersecurity Course Graduate</p>
-                                        <p>Now: Security Analyst at Amazon</p>
+                                        <p>Now: Security Analyst at E-commerce Platform</p>
                                     </div>
                                 </div>
                                 <div class="review-rating">
@@ -356,7 +360,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             <div class="review-content">
-                                <p>"The instructors are legitimate industry veterans. My mentor was a former NSA cybersecurity specialist who provided insights you simply can't get from textbooks. The 1-on-1 sessions were game-changers – getting personalized feedback on penetration testing techniques from someone who's done it professionally for 15+ years."</p>
+                                <p>"The instructors are legitimate industry veterans. My mentor was a former government cybersecurity specialist who provided insights you simply can't get from textbooks. The 1-on-1 sessions were game-changers – getting personalized feedback on penetration testing techniques from someone who's done it professionally for 15+ years."</p>
                             </div>
                             <div class="review-footer">
                                 <div class="helpful-votes">
@@ -369,11 +373,11 @@ include 'includes/header.php';
                         <div class="review-card">
                             <div class="review-header">
                                 <div class="reviewer-info">
-                                    <img src="images/reviewer-4.webp" alt="Lisa Park">
+                                    <img src="images/reviewer-4.webp" alt="Course Graduate">
                                     <div class="reviewer-details">
-                                        <h4>Lisa Park</h4>
+                                        <h4>Course Graduate</h4>
                                         <p>AI/ML Course Graduate</p>
-                                        <p>Now: Data Scientist at Meta</p>
+                                        <p>Now: Data Scientist at Social Media Platform</p>
                                     </div>
                                 </div>
                                 <div class="review-rating">
@@ -388,7 +392,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             <div class="review-content">
-                                <p>"Dr. Patel, who leads the AI course, literally worked at OpenAI and Stanford. Having access to someone of that caliber for weekly office hours was incredible. She didn't just teach the algorithms – she shared real stories about developing GPT models and gave practical advice that you can't find anywhere else."</p>
+                                <p>"The AI course instructor literally worked at leading research organizations and top universities. Having access to someone of that caliber for weekly office hours was incredible. They didn't just teach the algorithms – they shared real stories about developing advanced models and gave practical advice that you can't find anywhere else."</p>
                             </div>
                             <div class="review-footer">
                                 <div class="helpful-votes">
@@ -412,11 +416,11 @@ include 'includes/header.php';
                         <div class="review-card">
                             <div class="review-header">
                                 <div class="reviewer-info">
-                                    <img src="images/reviewer-5.webp" alt="Ahmed Hassan">
+                                    <img src="images/reviewer-5.webp" alt="Course Graduate">
                                     <div class="reviewer-details">
-                                        <h4>Ahmed Hassan</h4>
+                                        <h4>Course Graduate</h4>
                                         <p>Cloud/DevOps Course Graduate</p>
-                                        <p>Now: DevOps Engineer at Netflix</p>
+                                        <p>Now: DevOps Engineer at Streaming Platform</p>
                                     </div>
                                 </div>
                                 <div class="review-rating">
@@ -431,7 +435,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             <div class="review-content">
-                                <p>"The career support team is phenomenal. They completely rewrote my resume, conducted mock interviews, and even negotiated my salary offer. I went from making $45K as a sys admin to $110K at Netflix. James from career services personally introduced me to the hiring manager. The support doesn't end after you graduate."</p>
+                                <p>"The career support team is phenomenal. They completely rewrote my resume, conducted mock interviews, and even negotiated my salary offer. I went from making $45K as a sys admin to $110K at a major platform. The career advisor personally introduced me to the hiring manager. The support doesn't end after you graduate."</p>
                             </div>
                             <div class="review-footer">
                                 <div class="helpful-votes">
@@ -444,11 +448,11 @@ include 'includes/header.php';
                         <div class="review-card">
                             <div class="review-header">
                                 <div class="reviewer-info">
-                                    <img src="images/reviewer-6.webp" alt="Maria Santos">
+                                    <img src="images/reviewer-6.webp" alt="Course Graduate">
                                     <div class="reviewer-details">
-                                        <h4>Maria Santos</h4>
+                                        <h4>Course Graduate</h4>
                                         <p>PHP Course Graduate</p>
-                                        <p>Now: Backend Developer at Stripe</p>
+                                        <p>Now: Backend Developer at Fintech Company</p>
                                     </div>
                                 </div>
                                 <div class="review-rating">
@@ -463,7 +467,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             <div class="review-content">
-                                <p>"As a single mom changing careers, I was terrified about finding a job. The career team was incredibly supportive – they connected me with companies that value diversity, helped me practice technical interviews, and even provided childcare vouchers for interview days. Got 3 offers and chose Stripe. Forever grateful!"</p>
+                                <p>"As a single mom changing careers, I was terrified about finding a job. The career team was incredibly supportive – they connected me with companies that value diversity, helped me practice technical interviews, and even provided childcare vouchers for interview days. Got 3 offers and chose a leading fintech company. Forever grateful!"</p>
                             </div>
                             <div class="review-footer">
                                 <div class="helpful-votes">
@@ -485,7 +489,7 @@ include 'includes/header.php';
     <section class="ratings-breakdown py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <h2 class="section-title">Detailed Ratings Breakdown</h2>
                     <div class="rating-categories">
                         <div class="rating-item">
@@ -532,7 +536,7 @@ include 'includes/header.php';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <div class="review-summary">
                         <h3>Review Summary</h3>
                         <div class="star-breakdown">
@@ -610,9 +614,9 @@ include 'includes/header.php';
                     <div class="review-card recent">
                         <div class="review-header">
                             <div class="reviewer-info">
-                                <img src="images/reviewer-7.webp" alt="Tom Wilson">
+                                <img src="images/reviewer-7.webp" alt="Course Graduate">
                                 <div class="reviewer-details">
-                                    <h4>Tom Wilson</h4>
+                                    <h4>Recent Graduate</h4>
                                     <p>Full-Stack Course</p>
                                 </div>
                             </div>
@@ -640,9 +644,9 @@ include 'includes/header.php';
                     <div class="review-card recent">
                         <div class="review-header">
                             <div class="reviewer-info">
-                                <img src="images/reviewer-8.webp" alt="Nina Patel">
+                                <img src="images/reviewer-8.webp" alt="Course Graduate">
                                 <div class="reviewer-details">
-                                    <h4>Nina Patel</h4>
+                                    <h4>Recent Graduate</h4>
                                     <p>AI/ML Course</p>
                                 </div>
                             </div>
@@ -670,9 +674,9 @@ include 'includes/header.php';
                     <div class="review-card recent">
                         <div class="review-header">
                             <div class="reviewer-info">
-                                <img src="images/reviewer-9.webp" alt="Carlos Rodriguez">
+                                <img src="images/reviewer-9.webp" alt="Course Graduate">
                                 <div class="reviewer-details">
-                                    <h4>Carlos Rodriguez</h4>
+                                    <h4>Recent Graduate</h4>
                                     <p>Cybersecurity Course</p>
                                 </div>
                             </div>
@@ -696,9 +700,6 @@ include 'includes/header.php';
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="#" class="btn btn-outline-primary btn-lg">Load More Reviews</a>
             </div>
         </div>
         <div class="section-divider">
