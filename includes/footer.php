@@ -99,12 +99,12 @@
                         <div class="footer-section">
                             <h4 class="footer-title">Resources</h4>
                             <ul class="footer-links">
-                                <li><a href="#" target="_blank">Student Portal</a></li>
-                                <li><a href="#" target="_blank">Course Catalog</a></li>
-                                <li><a href="#" target="_blank">Career Services</a></li>
-                                <li><a href="#" target="_blank">Technical Support</a></li>
-                                <li><a href="#" target="_blank">Learning Blog</a></li>
-                                <li><a href="#" target="_blank">Community Forum</a></li>
+                                <li><a href="courses.php" aria-label="Student Portal">Student Portal</a></li>
+                                <li><a href="courses.php" aria-label="Course Catalog">Course Catalog</a></li>
+                                <li><a href="contact.php" aria-label="Career Services">Career Services</a></li>
+                                <li><a href="contact.php" aria-label="Technical Support">Technical Support</a></li>
+                                <li><a href="about.php" aria-label="Learning Blog">Learning Blog</a></li>
+                                <li><a href="faq.php" aria-label="Community Forum">Community Forum</a></li>
                             </ul>
                         </div>
                     </div>

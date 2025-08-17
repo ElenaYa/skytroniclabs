@@ -1,4 +1,101 @@
   /* ===============================
+     LABS OVERVIEW (Skill Matrix)
+  =============================== */
+  .labs-overview { position: relative; z-index: 1; }
+  .labs-intro .labs-bullets { list-style: none; padding: 0; margin-top: var(--spacing-md); }
+  .labs-intro .labs-bullets li { display: flex; align-items: center; gap: .5rem; padding: .5rem 0; }
+  .labs-intro .labs-bullets i { color: var(--color-accent); }
+
+  .matrix-wrap { position: relative; }
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: .75rem;
+    padding: var(--spacing-lg);
+    background: linear-gradient(180deg, var(--color-bg-soft), transparent);
+    border: 1px solid var(--color-stroke);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-lg);
+  }
+  .matrix-item {
+    position: relative;
+    border-radius: var(--radius-lg);
+    padding: .9rem 1rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-stroke);
+    box-shadow: 0 1px 0 rgba(0,0,0,.02);
+    overflow: hidden;
+  }
+  .matrix-item span { position: relative; z-index: 1; font-weight: 600; }
+  .matrix-item::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(0,192,115,.12), rgba(0,192,115,.04));
+    opacity: .85;
+  }
+  .lvl-2::before, .lvl-3::before, .lvl-4::before, .lvl-5::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 6px; border-top-left-radius: inherit; border-bottom-left-radius: inherit;
+  }
+  .lvl-2::before { background: #A7F3D0; }
+  .lvl-3::before { background: #6EE7B7; }
+  .lvl-4::before { background: #34D399; }
+  .lvl-5::before { background: #10B981; }
+
+  .matrix-legend { display: flex; align-items: center; gap: .75rem; padding: .75rem 0 .25rem; }
+  .matrix-legend .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .matrix-legend .lvl-2 { background: #A7F3D0; }
+  .matrix-legend .lvl-3 { background: #6EE7B7; }
+  .matrix-legend .lvl-4 { background: #34D399; }
+  .matrix-legend .lvl-5 { background: #10B981; }
+  .matrix-legend small { color: var(--color-text-muted); margin-right: .75rem; }
+
+  @media (max-width: 992px) {
+    .matrix-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  }
+  @media (max-width: 768px) {
+    .matrix-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+  /* ===============================
+     CTA SECTION
+  =============================== */
+  .cta-section { position: relative; z-index: 1; }
+  .cta-card {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #00A85F 100%);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-3xl);
+    box-shadow: var(--shadow-xl);
+    color: var(--color-white);
+    overflow: hidden;
+    position: relative;
+  }
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(600px 200px at 80% 0%, rgba(255,255,255,.2) 0%, transparent 60%),
+                radial-gradient(400px 160px at 10% 100%, rgba(255,255,255,.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .cta-content h2 { color: var(--color-white); font-weight: 800; margin-bottom: .5rem; }
+  .cta-content p { color: rgba(255,255,255,.9); margin-bottom: var(--spacing-lg); }
+  .cta-benefits { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .75rem 1.25rem; margin-bottom: var(--spacing-lg); }
+  .cta-benefits .benefit { display: flex; align-items: center; gap: .5rem; color: var(--color-white); }
+  .cta-benefits .benefit i { color: var(--color-white); opacity: .95; }
+  .cta-actions .btn { box-shadow: var(--shadow-md); }
+  .cta-actions .btn.btn-outline-light { border-color: rgba(255,255,255,.7); color: var(--color-white); }
+  .cta-actions .btn.btn-outline-light:hover { background: rgba(255,255,255,.12); }
+  .cta-note small { color: rgba(255,255,255,.85); }
+
+  @media (max-width: 992px) {
+    .cta-card { padding: var(--spacing-2xl); }
+  }
+  @media (max-width: 768px) {
+    .cta-benefits { grid-template-columns: 1fr; }
+    .cta-actions { display: flex; flex-direction: column; gap: .75rem; }
+  }
+  /* ===============================
      LEARNING EXPERIENCE
   =============================== */
   .learning-experience {
@@ -560,6 +657,7 @@
     gap: 0.75rem;
     text-decoration: none;
     color: var(--color-text);
+    transition: transform var(--transition-fast);
   }
   
   .logo-icon {
@@ -588,6 +686,7 @@
     display: flex;
     flex-direction: column;
     line-height: 1.2;
+    transition: transform var(--transition-fast), color var(--transition-fast);
   }
   
   .logo-name {
@@ -602,6 +701,24 @@
     color: var(--color-accent);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    transition: color var(--transition-fast);
+  }
+
+  /* Navbar brand hover behavior */
+  .navbar-brand,
+  .navbar-brand:hover,
+  .navbar-brand:focus {
+    text-decoration: none;
+  }
+  .navbar-brand:hover .logo {
+    transform: translateY(-1px);
+  }
+  .navbar-brand:hover .logo-icon {
+    transform: rotate(8deg) scale(1.08);
+  }
+  .navbar-brand:hover .logo-name,
+  .navbar-brand:hover .logo-subtitle {
+    color: var(--color-accent);
   }
   
   /* Navigation Links */
@@ -1902,6 +2019,11 @@
       transform: none;
       opacity: 1;
       visibility: visible;
+    }
+
+    /* CTA button spacing inside burger menu */
+    #navbarNav .navbar-cta .btn {
+      margin-bottom: var(--spacing-md);
     }
 
     /* Ensure dropdowns inside mobile menu expand vertically */

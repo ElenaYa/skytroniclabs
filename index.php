@@ -65,6 +65,53 @@ include 'includes/header.php';
         </div>
     </section>
 
+    <!-- Labs Overview Section -->
+    <section class="labs-overview py-5">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                    <div class="labs-intro">
+                        <h2 class="section-title">Hands‑On Skill Matrix</h2>
+                        <p class="section-subtitle">A visual map of the core skills you’ll build across our labs — from fundamentals to advanced systems.</p>
+                        <ul class="labs-bullets">
+                            <li><i class="fas fa-bolt"></i><span>Guided labs with instant feedback</span></li>
+                            <li><i class="fas fa-layer-group"></i><span>Progress from basics to production patterns</span></li>
+                            <li><i class="fas fa-shapes"></i><span>Balanced stack: Frontend, Backend, Security, Cloud, AI</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="matrix-wrap">
+                        <div class="matrix-grid">
+                            <div class="matrix-item lvl-5"><span>HTML</span></div>
+                            <div class="matrix-item lvl-5"><span>CSS</span></div>
+                            <div class="matrix-item lvl-5"><span>JavaScript</span></div>
+                            <div class="matrix-item lvl-4"><span>React</span></div>
+                            <div class="matrix-item lvl-4"><span>Node.js</span></div>
+                            <div class="matrix-item lvl-3"><span>APIs</span></div>
+                            <div class="matrix-item lvl-3"><span>Databases</span></div>
+                            <div class="matrix-item lvl-3"><span>Testing</span></div>
+                            <div class="matrix-item lvl-2"><span>Security</span></div>
+                            <div class="matrix-item lvl-2"><span>Cloud</span></div>
+                            <div class="matrix-item lvl-2"><span>DevOps</span></div>
+                            <div class="matrix-item lvl-2"><span>Containers</span></div>
+                            <div class="matrix-item lvl-3"><span>TypeScript</span></div>
+                            <div class="matrix-item lvl-3"><span>Design Systems</span></div>
+                            <div class="matrix-item lvl-4"><span>Performance</span></div>
+                            <div class="matrix-item lvl-2"><span>AI/ML Basics</span></div>
+                        </div>
+                        <div class="matrix-legend">
+                            <span class="dot lvl-2"></span><small>Foundation</small>
+                            <span class="dot lvl-3"></span><small>Core</small>
+                            <span class="dot lvl-4"></span><small>Advanced</small>
+                            <span class="dot lvl-5"></span><small>Expert Labs</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section class="features-section py-5">
         <div class="container">
