@@ -168,7 +168,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="timeline-content">
                                     <h4>The Beginning</h4>
-                                    <p>Founded by three former Google engineers who saw the gap between traditional education and industry needs. Started with a single web development course and 50 beta students.</p>
+                                    <p>Founded by a team of senior engineers who saw the gap between traditional education and industry needs. Started with a single web development course and 50 beta students.</p>
                                     <div class="timeline-stats">
                                         <span class="stat">50 students</span>
                                         <span class="stat">1 course</span>
@@ -198,7 +198,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="timeline-content">
                                     <h4>Global Expansion</h4>
-                                    <p>Launched internationally, expanded to 6 comprehensive courses, and partnered with 100+ tech companies. Introduced our signature hands-on project methodology.</p>
+                                    <p>Launched internationally, expanded to 6 comprehensive courses, and established hiring pathways with 100+ employers worldwide. Introduced our signature hands-on project methodology.</p>
                                     <div class="timeline-stats">
                                         <span class="stat">5,000+ students</span>
                                         <span class="stat">25+ countries</span>
@@ -213,7 +213,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="timeline-content">
                                     <h4>Innovation & Recognition</h4>
-                                    <p>Launched AI-powered learning assistance, won "EdTech Innovation of the Year" award, and established our dedicated career services department with industry partnerships.</p>
+                                    <p>Launched AI-powered learning assistance and established our dedicated career services department with broad employer collaborations.</p>
                                     <div class="timeline-stats">
                                         <span class="stat">8,000+ students</span>
                                         <span class="stat">92% job rate</span>
@@ -247,35 +247,32 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Leadership Team Section -->
+    <!-- Leadership Section -->
     <section class="leadership-team py-5">
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-12">
-                    <h2 class="section-title">Leadership Team</h2>
-                    <p class="section-subtitle">Industry experts leading the future of technology education</p>
+                    <h2 class="section-title">Leadership & Faculty</h2>
+                    <p class="section-subtitle">Experienced educators and engineers focused on learner outcomes</p>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/team-ceo.webp" alt="Dr. Alexandra Chen, CEO">
+                            <img src="images/team-ceo.webp" alt="Executive leadership portrait">
                             <div class="member-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                </div>
+                               
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Dr. Alexandra Chen</h4>
-                            <p class="member-role">CEO & Co-Founder</p>
-                            <p class="member-bio">Former Google Principal Engineer with 15+ years in tech. PhD in Computer Science from MIT. Led engineering teams of 200+ developers and launched products used by billions.</p>
+                            <h4>Executive Team</h4>
+                            <p class="member-role">Strategy & Operations</p>
+                            <p class="member-bio">Leads organizational vision, student experience, and quality standards. Focus on transparent outcomes and continuous improvement.</p>
                             <div class="member-highlights">
-                                <span class="highlight">Ex-Google Principal Engineer</span>
-                                <span class="highlight">MIT PhD</span>
-                                <span class="highlight">15+ years experience</span>
+                                <span class="highlight">15+ yrs leadership</span>
+                                <span class="highlight">Learning outcomes</span>
+                                <span class="highlight">Student-first approach</span>
                             </div>
                         </div>
                     </div>
@@ -284,22 +281,19 @@ include 'includes/header.php';
                 <div class="col-lg-4 col-md-6">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/team-cto.webp" alt="Marcus Rodriguez, CTO">
+                            <img src="images/team-cto.webp" alt="Technology leadership portrait">
                             <div class="member-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                </div>
+                              
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Marcus Rodriguez</h4>
-                            <p class="member-role">CTO & Co-Founder</p>
-                            <p class="member-bio">Former Microsoft Senior Architect and Netflix Tech Lead. Expert in scalable systems, cloud architecture, and AI/ML. Built platforms serving 100M+ users daily.</p>
+                            <h4>Technology</h4>
+                            <p class="member-role">Engineering & Platform</p>
+                            <p class="member-bio">Owns platform reliability, scalable architecture, and security. Ensures labs run smoothly worldwide.</p>
                             <div class="member-highlights">
-                                <span class="highlight">Ex-Microsoft & Netflix</span>
-                                <span class="highlight">Cloud Architecture Expert</span>
-                                <span class="highlight">100M+ users impact</span>
+                                <span class="highlight">Scalable systems</span>
+                                <span class="highlight">Cloud & security</span>
+                                <span class="highlight">Global uptime</span>
                             </div>
                         </div>
                     </div>
@@ -308,22 +302,19 @@ include 'includes/header.php';
                 <div class="col-lg-4 col-md-6">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/team-cpo.webp" alt="Sarah Kim, CPO">
+                            <img src="images/team-cpo.webp" alt="Product leadership portrait">
                             <div class="member-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                </div>
+                               
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Sarah Kim</h4>
-                            <p class="member-role">Chief Product Officer</p>
-                            <p class="member-bio">Former Apple Senior Product Manager and Coursera VP of Product. Specialist in educational technology and user experience design. Led products with 50M+ learners.</p>
+                            <h4>Product</h4>
+                            <p class="member-role">Curriculum & UX</p>
+                            <p class="member-bio">Shapes learning experience, curriculum structure, and accessibility. Focused on clarity, feedback loops, and measurable progress.</p>
                             <div class="member-highlights">
-                                <span class="highlight">Ex-Apple & Coursera</span>
-                                <span class="highlight">EdTech Specialist</span>
-                                <span class="highlight">50M+ learners</span>
+                                <span class="highlight">Curriculum design</span>
+                                <span class="highlight">Accessible UX</span>
+                                <span class="highlight">Outcome metrics</span>
                             </div>
                         </div>
                     </div>
@@ -332,22 +323,19 @@ include 'includes/header.php';
                 <div class="col-lg-4 col-md-6">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/team-vp-eng.webp" alt="David Thompson, VP Engineering">
+                            <img src="images/team-vp-eng.webp" alt="Engineering leadership portrait">
                             <div class="member-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                </div>
+                               
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>David Thompson</h4>
-                            <p class="member-role">VP of Engineering</p>
-                            <p class="member-bio">Former Amazon Principal Engineer and Tesla Software Architect. Expert in autonomous systems, cybersecurity, and high-performance computing. 20+ years in tech.</p>
+                            <h4>Engineering</h4>
+                            <p class="member-role">Delivery & Quality</p>
+                            <p class="member-bio">Drives engineering execution, code quality, and secure practices. Mentors learners through production-grade patterns.</p>
                             <div class="member-highlights">
-                                <span class="highlight">Ex-Amazon & Tesla</span>
-                                <span class="highlight">Cybersecurity Expert</span>
-                                <span class="highlight">20+ years experience</span>
+                                <span class="highlight">Secure by design</span>
+                                <span class="highlight">Code quality</span>
+                                <span class="highlight">Mentorship</span>
                             </div>
                         </div>
                     </div>
@@ -356,22 +344,19 @@ include 'includes/header.php';
                 <div class="col-lg-4 col-md-6">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/team-head-ai.webp" alt="Dr. Priya Patel, Head of AI">
+                            <img src="images/team-head-ai.webp" alt="AI leadership portrait">
                             <div class="member-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" aria-label="Research Gate"><i class="fab fa-researchgate"></i></a>
-                                </div>
+                            
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>Dr. Priya Patel</h4>
-                            <p class="member-role">Head of AI & Research</p>
-                            <p class="member-bio">Former OpenAI Research Scientist and Stanford AI Lab Director. PhD in Machine Learning from Stanford. Published 50+ papers and holds 15 AI patents.</p>
+                            <h4>AI & Research</h4>
+                            <p class="member-role">Applied ML</p>
+                            <p class="member-bio">Guides applied AI curriculum and research-informed practices. Bridges foundational theory with practical demos.</p>
                             <div class="member-highlights">
-                                <span class="highlight">Ex-OpenAI & Stanford</span>
-                                <span class="highlight">50+ Publications</span>
-                                <span class="highlight">15 AI Patents</span>
+                                <span class="highlight">Research to practice</span>
+                                <span class="highlight">Responsible AI</span>
+                                <span class="highlight">Hands-on demos</span>
                             </div>
                         </div>
                     </div>
@@ -380,22 +365,19 @@ include 'includes/header.php';
                 <div class="col-lg-4 col-md-6">
                     <div class="team-member">
                         <div class="member-image">
-                            <img src="images/team-vp-careers.webp" alt="James Wilson, VP Career Services">
+                            <img src="images/team-vp-careers.webp" alt="Career services leadership portrait">
                             <div class="member-overlay">
-                                <div class="social-links">
-                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                </div>
+                               
                             </div>
                         </div>
                         <div class="member-info">
-                            <h4>James Wilson</h4>
-                            <p class="member-role">VP of Career Services</p>
-                            <p class="member-bio">Former Google Talent Acquisition Director and LinkedIn Head of Tech Recruiting. Placed 5,000+ professionals in top tech roles. Expert in career transformation.</p>
+                            <h4>Career Services</h4>
+                            <p class="member-role">Hiring Readiness</p>
+                            <p class="member-bio">Prepares learners for hiring: portfolios, interview practice, and job search systems. Data-driven guidance and fair access.</p>
                             <div class="member-highlights">
-                                <span class="highlight">Ex-Google & LinkedIn</span>
-                                <span class="highlight">5,000+ Placements</span>
-                                <span class="highlight">Career Expert</span>
+                                <span class="highlight">Portfolio first</span>
+                                <span class="highlight">Interview prep</span>
+                                <span class="highlight">Equitable access</span>
                             </div>
                         </div>
                     </div>
