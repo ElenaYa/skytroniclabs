@@ -1,6 +1,4 @@
-  /* ===============================
-     CONTACT - FAQ QUICK ACCESS
-  =============================== */
+
   .faq-quick-access .faq-quick-item {
     background: var(--color-white);
     border: 1px solid var(--color-stroke);
@@ -22,9 +20,7 @@
   @media (max-width: 576px) {
     .faq-quick-access .faq-quick-item { padding: var(--spacing-lg); }
   }
-  /* ===============================
-     CONTACT FORMS
-  =============================== */
+
   .contact-form-container { background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-2xl); box-shadow: var(--shadow-lg); padding: var(--spacing-2xl); }
   .contact-form .form-step { display: none; }
   .contact-form .form-step.active { display: block; }
@@ -39,17 +35,13 @@
   .contact-form .form-navigation { display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md); }
   @media (max-width: 992px) { .contact-form .inquiry-types { grid-template-columns: repeat(2, minmax(0,1fr)); } }
   @media (max-width: 576px) { .contact-form .inquiry-types { grid-template-columns: 1fr; } .contact-form-container { padding: var(--spacing-xl); } }
-  /* ===============================
-     CONTACT OPTIONS
-  =============================== */
+
   .contact-options .contact-option { background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-xl); height: 100%; box-shadow: var(--shadow-md); padding: var(--spacing-xl); transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium); }
   .contact-options .contact-option:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); border-color: var(--color-accent); }
   .contact-options .option-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(0,192,115,.12) 100%); color: var(--color-accent); font-size: 1.25rem; margin: 0 0 var(--spacing-md) 0; }
   .contact-options .option-benefits ul { margin: 0; padding-left: 1.25rem; color: var(--color-text-muted); }
   .contact-options .option-cta { margin-top: var(--spacing-md); }
-  /* ===============================
-     CONTACT - QUICK LINKS & RESPONSE GUARANTEE
-  =============================== */
+ 
   .quick-links { background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-xl); padding: var(--spacing-xl); box-shadow: var(--shadow-md); margin-top: var(--spacing-xl); }
   .quick-links h3 { margin-top: 0; margin-bottom: var(--spacing-md); font-weight: 800; }
   .quick-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
@@ -57,12 +49,9 @@
   .quick-links li a::after { content: '→'; color: var(--color-accent); }
   .quick-links li a:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); border-color: var(--color-accent); background: var(--color-white); }
 
-  /* Company badge styling for text-based badges */
   .company-badge { position: absolute; bottom: 8px; right: 8px; }
   .company-badge .badge-text { background: var(--color-accent); color: var(--color-white); padding: .25rem .5rem; border-radius: var(--radius-sm); font-size: .75rem; font-weight: 600; box-shadow: var(--shadow-sm); }
-  /* ===============================
-     REVIEWS - FEATURED SUCCESS STORIES
-  =============================== */
+ 
   .featured-stories { position: relative; z-index: 1; }
   .story-card { background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-2xl); box-shadow: var(--shadow-lg); overflow: hidden; height: 100%; transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium); }
   .story-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); border-color: var(--color-accent); }
@@ -97,9 +86,7 @@
     .transformation-stats { grid-template-columns: 1fr; }
     .company-badge .badge-text { display: none; }
   }
-  /* ===============================
-     REVIEWS - REVIEW CATEGORIES
-  =============================== */
+ 
   .review-categories { position: relative; z-index: 1; }
   .review-categories .category-title { display: flex; align-items: center; gap: .6rem; justify-content: center; font-weight: 800; margin: 0 0 var(--spacing-md) 0; }
   .review-categories .category-title i { color: var(--color-accent); }
@@ -2225,9 +2212,7 @@
     font-weight: 500;
   }
   
-  /* ===============================
-     FOOTER
-  =============================== */
+  
   .main-footer {
     position: relative;
     background: var(--color-dark);
@@ -2472,10 +2457,7 @@
     color: var(--color-accent);
     text-decoration: none;
   }
-  
-  /* ===============================
-     BACK TO TOP BUTTON
-  =============================== */
+ 
   .back-to-top {
     position: fixed;
     bottom: 2rem;
@@ -2506,9 +2488,7 @@
     transform: translateY(-2px);
   }
   
-  /* ===============================
-     LOADING SCREEN
-  =============================== */
+ 
   .loading-screen {
     position: fixed;
     top: 0;
@@ -2570,10 +2550,7 @@
     0% { transform: translateX(-100%); }
     100% { transform: translateX(400%); }
   }
-  
-  /* ===============================
-     COOKIE CONSENT
-  =============================== */
+ 
   .cookie-consent {
     position: fixed;
     bottom: 0;
@@ -2612,7 +2589,6 @@
     flex-shrink: 0;
   }
   
-  /* Cookie Modal */
   .cookie-modal {
     position: fixed;
     top: 0;
@@ -2745,10 +2721,7 @@
   .btn-close:hover {
     color: var(--color-text);
   }
-  
-  /* ===============================
-     TOAST NOTIFICATIONS
-  =============================== */
+ 
   .toast-container {
     position: fixed;
     z-index: var(--z-toast);
@@ -2785,9 +2758,7 @@
     padding: 1rem;
   }
   
-  /* ===============================
-     RESPONSIVE DESIGN
-  =============================== */
+ 
   @media (max-width: 992px) {
     .hero-title {
       font-size: 3rem;
@@ -2815,9 +2786,7 @@
     }
   }
   
-  /* Treat up to 1012px as mobile nav to show burger on tablets */
   @media (max-width: 1012px){
-    /* Navigation (mobile) */
     #navbarNav.collapse {
       display: block !important;
       height: auto !important;
@@ -2854,12 +2823,10 @@
       visibility: visible;
     }
 
-    /* CTA button spacing inside burger menu */
     #navbarNav .navbar-cta .btn {
       margin-bottom: var(--spacing-md);
     }
 
-    /* Ensure dropdowns inside mobile menu expand vertically */
     #navbarNav .dropdown-menu {
       position: static;
       display: none;
@@ -2905,7 +2872,6 @@
       margin-top: 0;
     }
     
-    /* Hero */
     .hero-section {
       min-height: auto;
       padding: 100px 0 60px;
@@ -2933,7 +2899,6 @@
       display: none;
     }
     
-    /* Cards */
     .course-meta {
       flex-direction: column;
       gap: var(--spacing-sm);
@@ -2943,7 +2908,6 @@
       justify-content: center;
     }
     
-    /* Footer */
     .cookie-content {
       flex-direction: column;
       text-align: center;
@@ -2968,7 +2932,6 @@
       gap: var(--spacing-sm);
     }
     
-    /* Back to top */
     .back-to-top {
       bottom: 1rem;
       right: 1rem;
@@ -3022,9 +2985,7 @@
     }
   }
   
-  /* ===============================
-     PRINT STYLES
-  =============================== */
+  
   @media print {
     .main-header,
     .back-to-top,
@@ -3055,10 +3016,7 @@
       color: black !important;
     }
   }
-  
-  /* ===============================
-     ACCESSIBILITY ENHANCEMENTS
-  =============================== */
+
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -3078,10 +3036,8 @@
   }
   
   @media (prefers-color-scheme: dark) {
-    /* Dark mode preferences can be added here if needed */
   }
   
-  /* High contrast mode support */
   @media (prefers-contrast: high) {
     :root {
       --color-stroke: #000000;
@@ -3094,7 +3050,6 @@
     }
   }
   
-  /* Focus indicators for keyboard navigation */
   *:focus {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
@@ -3106,7 +3061,6 @@
     outline-offset: 2px;
   }
   
-  /* Screen reader only content */
   .sr-only {
     position: absolute;
     width: 1px;
@@ -3119,15 +3073,28 @@
     border: 0;
   }
   
-  /* ===============================
-     COMPONENT-SPECIFIC STYLES
-  =============================== */
   
-  /* Legal Pages */
   .legal-hero {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, var(--color-accent-soft) 0%, transparent 100%);
   }
+  .legal-content { background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-2xl); box-shadow: var(--shadow-lg); padding: var(--spacing-2xl); }
+  .legal-section .section-content { display: grid; gap: var(--spacing-md); }
+  .key-principles .principles-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--spacing-md); }
+  .principle { background: var(--color-bg-soft); border: 1px solid var(--color-stroke); border-radius: var(--radius-xl); padding: var(--spacing-lg); display: grid; grid-template-columns: 1fr; gap: var(--spacing-md); align-items: center; }
+  .principle-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--color-accent-soft) 0%, rgba(0,192,115,.12) 100%); color: var(--color-accent); font-size: 1.25rem; }
+  .principle h4 { margin: 0 0 .25rem 0; font-weight: 800; }
+  .compliance-badges .badges-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--spacing-md); }
+  .compliance-badge { background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-xl); padding: var(--spacing-lg); box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 48px 1fr; gap: var(--spacing-md); align-items: center; }
+  .badge-info h4 { margin: 0 0 .15rem 0; font-weight: 800; color: var(--color-text); }
+  .badge-info p { margin: 0; color: var(--color-text-muted); }
+  .info-categories .info-category { background: var(--color-bg-soft); border: 1px solid var(--color-stroke); border-radius: var(--radius-xl); padding: var(--spacing-xl); }
+  .info-category h3 { margin-top: 0; }
+  .security-note { display: flex; align-items: flex-start; gap: .5rem; background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-lg); padding: .6rem .75rem; }
+  .security-note i { color: var(--color-accent); margin-top: .1rem; }
+  .privacy-summary { margin-top: var(--spacing-lg); background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-xl); padding: var(--spacing-lg); box-shadow: var(--shadow-sm); }
+  .privacy-summary h4 { margin-top: 0; font-weight: 800; }
+  @media (max-width: 992px) { .key-principles .principles-grid, .compliance-badges .badges-grid { grid-template-columns: 1fr; } .legal-content { padding: var(--spacing-xl); } }
   
   .legal-meta {
     display: flex;
@@ -3167,8 +3134,16 @@
     padding-bottom: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
   }
+  /* TOC navigation (privacy/terms) */
+  .toc-section { position: relative; z-index: 1; }
+  .toc-sidebar { position: sticky; top: 96px; }
+  .toc-nav { display: grid; gap: .5rem; background: var(--color-white); border: 1px solid var(--color-stroke); border-radius: var(--radius-2xl); box-shadow: var(--shadow-lg); padding: var(--spacing-lg); }
+  .toc-link { display: flex; align-items: center; gap: .5rem; color: var(--color-text); text-decoration: none; border: 1px solid transparent; border-radius: var(--radius-md); padding: .5rem .6rem; transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast); }
+  .toc-link::before { content: '\2192'; color: var(--color-accent); opacity: .85; }
+  .toc-link:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); border-color: var(--color-accent); background: var(--color-bg-soft); }
+  .toc-link.active { background: var(--color-accent-soft); border-color: var(--color-accent); color: var(--color-text); }
+  @media (max-width: 992px) { .toc-sidebar { position: static; margin-bottom: var(--spacing-md); } }
   
-  /* FAQ Styles */
   .faq-accordion .faq-item {
     border: 1px solid var(--color-stroke);
     border-radius: var(--radius-md);
@@ -3216,7 +3191,6 @@
     max-height: 1200px;
   }
   
-  /* Error Pages */
   .error-hero {
     min-height: 75vh;
     display: flex;
@@ -3371,6 +3345,3 @@
     10%, 80% { transform: translateX(100%); }
   }
   
-  /* This completes the main stylesheet with all the responsive design,
-     accessibility features, and component-specific styles needed for
-     the Skytronic Labs website */

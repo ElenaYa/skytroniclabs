@@ -16,7 +16,7 @@ include 'includes/header.php';
                     <div class="legal-meta">
                         <div class="meta-item">
                             <i class="fas fa-calendar"></i>
-                            <span>Last Updated: December 1, 2024</span>
+                            <span>Last Updated: August 17, 2025</span>
                         </div>
                         <div class="meta-item">
                             <i class="fas fa-gavel"></i>

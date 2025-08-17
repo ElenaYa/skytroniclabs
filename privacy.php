@@ -16,7 +16,7 @@ include 'includes/header.php';
                     <div class="legal-meta">
                         <div class="meta-item">
                             <i class="fas fa-calendar"></i>
-                            <span>Last Updated: December 1, 2024</span>
+                            <span>Last Updated: August 17, 2025</span>
                         </div>
                         <div class="meta-item">
                             <i class="fas fa-shield-alt"></i>
@@ -580,7 +580,7 @@ include 'includes/header.php';
                                 
                                 <div class="security-note">
                                     <i class="fas fa-info-circle"></i>
-                                    <p><strong>Security Reporting:</strong> If you discover any security vulnerabilities or have concerns about our security practices, please contact our security team immediately at <a href="mailto:security@skytroniclabs.com">security@skytroniclabs.com</a>.</p>
+                                    <p><strong>Security Reporting:</strong> If you discover any security vulnerabilities or have concerns about our security practices, please contact our security team immediately at <a href="mailto:admin@skytroniclabs.com">security@skytroniclabs.com</a>.</p>
                                 </div>
                             </div>
                         </section>
@@ -692,7 +692,7 @@ include 'includes/header.php';
                                             <h4>📞 Direct Contact</h4>
                                             <p>Contact our Data Protection Officer:</p>
                                             <ul>
-                                                <li>Email: <a href="mailto:privacy@skytroniclabs.com">privacy@skytroniclabs.com</a></li>
+                                                <li>Email: <a href="mailto:admin@skytroniclabs.com">admin@skytroniclabs.com</a></li>
                                                 <li>Phone: 1-800-SKYTRONIC (privacy hotline)</li>
                                                 <li>Mail: Skytronic Labs Privacy Team, 123 Tech Street, San Francisco, CA 94105</li>
                                             </ul>
@@ -772,11 +772,7 @@ include 'includes/header.php';
                                                 <li>Monitor website performance and errors</li>
                                                 <li>Help us improve user experience</li>
                                             </ul>
-                                            <div class="cookie-control">
-                                                <button class="btn btn-sm btn-outline-primary toggle-cookies" data-category="performance">
-                                                    <span class="cookie-status">Allow</span>
-                                                </button>
-                                            </div>
+                                          
                                         </div>
                                     </div>
                                     
@@ -791,11 +787,7 @@ include 'includes/header.php';
                                                 <li>Measure advertising effectiveness</li>
                                                 <li>Personalize marketing messages</li>
                                             </ul>
-                                            <div class="cookie-control">
-                                                <button class="btn btn-sm btn-outline-primary toggle-cookies" data-category="marketing">
-                                                    <span class="cookie-status">Allow</span>
-                                                </button>
-                                            </div>
+                                         
                                         </div>
                                     </div>
                                 </div>
@@ -906,13 +898,8 @@ include 'includes/header.php';
                                     <div class="contact-method">
                                         <h3>📧 Email</h3>
                                         <p><strong>General Privacy Inquiries:</strong><br>
-                                        <a href="mailto:privacy@skytroniclabs.com">privacy@skytroniclabs.com</a></p>
-                                        
-                                        <p><strong>Data Protection Officer:</strong><br>
-                                        <a href="mailto:dpo@skytroniclabs.com">dpo@skytroniclabs.com</a></p>
-                                        
-                                        <p><strong>Security Concerns:</strong><br>
-                                        <a href="mailto:security@skytroniclabs.com">security@skytroniclabs.com</a></p>
+                                        <a href="mailto:admin@skytroniclabs.com">admin@skytroniclabs.com</a></p>
+                                       
                                     </div>
                                     
                                     <div class="contact-method">
@@ -926,16 +913,7 @@ include 'includes/header.php';
                                         </address>
                                     </div>
                                     
-                                    <div class="contact-method">
-                                        <h3>🌍 EU Representative</h3>
-                                        <address>
-                                            <strong>Skytronic Labs EU Ltd.</strong><br>
-                                            Attention: GDPR Representative<br>
-                                            45 Privacy Square<br>
-                                            London, EC1A 1BB<br>
-                                            United Kingdom
-                                        </address>
-                                    </div>
+                                 
                                 </div>
                                 
                                 <div class="response-commitment">

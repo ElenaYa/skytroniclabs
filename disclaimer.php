@@ -16,7 +16,7 @@ include 'includes/header.php';
                     <div class="legal-meta">
                         <div class="meta-item">
                             <i class="fas fa-calendar"></i>
-                            <span>Last Updated: December 1, 2024</span>
+                            <span>Last Updated: August 17, 2025</span>
                         </div>
                         <div class="meta-item">
                             <i class="fas fa-exclamation-triangle"></i>
@@ -757,7 +757,7 @@ include 'includes/header.php';
                                         </address>
                                     </div>
                                 </div>
-                                <p class="last-updated"><strong>This disclaimer was last updated on December 1, 2024.</strong></p>
+                                <p class="last-updated"><strong>This disclaimer was last updated on August 17, 2025.</strong></p>
                             </div>
                         </section>
                     </div>
