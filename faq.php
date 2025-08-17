@@ -249,7 +249,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             
-                            <div class="faq-item">
+                            <div class="faq-item" id="prerequisites">
                                 <div class="faq-question">
                                     <h3>Do I need prior programming experience?</h3>
                                     <i class="fas fa-chevron-down"></i>
@@ -283,7 +283,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             
-                            <div class="faq-item">
+                            <div class="faq-item" id="course-duration">
                                 <div class="faq-question">
                                     <h3>How much time should I dedicate to studying each week?</h3>
                                     <i class="fas fa-chevron-down"></i>
@@ -371,7 +371,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             
-                            <div class="faq-item">
+                            <div class="faq-item" id="payment-plans">
                                 <div class="faq-question">
                                     <h3>Do you offer payment plans?</h3>
                                     <i class="fas fa-chevron-down"></i>
@@ -427,7 +427,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             
-                            <div class="faq-item">
+                            <div class="faq-item" id="refund-policy">
                                 <div class="faq-question">
                                     <h3>What is your refund policy?</h3>
                                     <i class="fas fa-chevron-down"></i>
@@ -744,6 +744,7 @@ include 'includes/header.php';
                     <!-- Career Support -->
                     <div id="career" class="faq-section">
                         <h2 class="section-title">Career Support</h2>
+                        <div id="job-support"></div>
                         <div class="faq-accordion">
                             <div class="faq-item">
                                 <div class="faq-question">

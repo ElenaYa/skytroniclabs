@@ -975,6 +975,8 @@ class FormHandler {
 
     setupForms() {
         this.forms.forEach(form => {
+            // Disable native validation; we handle it manually
+            form.setAttribute('novalidate', 'novalidate');
             form.addEventListener('submit', (e) => this.handleSubmit(e));
             
             // Real-time validation
@@ -1069,7 +1071,8 @@ class FormHandler {
     }
 
     validateStep(stepDiv) {
-        const requiredFields = stepDiv.querySelectorAll('[required]');
+        const requiredFields = Array.from(stepDiv.querySelectorAll('[required]'))
+            .filter((el) => this.isElementVisible(el));
         let isValid = true;
 
         requiredFields.forEach(field => {
@@ -1090,8 +1093,23 @@ class FormHandler {
         // Clear previous errors
         this.clearFieldError(field);
 
-        // Required field validation
-        if (field.hasAttribute('required') && !value) {
+        // Radio group validation
+        if (type === 'radio' && field.hasAttribute('required')) {
+            const form = field.form || document;
+            const group = form.querySelectorAll(`input[type="radio"][name="${field.name}"]`);
+            const anyChecked = Array.from(group).some(r => r.checked);
+            if (!anyChecked) {
+                errorMessage = 'Please select an option';
+                isValid = false;
+            }
+        }
+        // Checkbox required validation
+        else if (type === 'checkbox' && field.hasAttribute('required') && !field.checked) {
+            errorMessage = 'This field is required';
+            isValid = false;
+        }
+        // Required field validation for other types
+        else if (field.hasAttribute('required') && !value) {
             errorMessage = 'This field is required';
             isValid = false;
         }
@@ -1130,7 +1148,12 @@ class FormHandler {
 
     showFieldError(field, message) {
         field.classList.add('is-invalid');
-        
+        // Highlight associated label as well (for checkboxes/radios)
+        const label = (field.id ? (field.form || document).querySelector(`label[for="${field.id}"]`) : null) || field.closest('.form-check')?.querySelector('.form-check-label');
+        if (label) {
+            label.classList.add('text-danger');
+        }
+
         // Remove existing error message
         const existingError = field.parentNode.querySelector('.error-message');
         if (existingError) {
@@ -1146,6 +1169,10 @@ class FormHandler {
 
     clearFieldError(field) {
         field.classList.remove('is-invalid');
+        const label = (field.id ? (field.form || document).querySelector(`label[for="${field.id}"]`) : null) || field.closest('.form-check')?.querySelector('.form-check-label');
+        if (label) {
+            label.classList.remove('text-danger');
+        }
         const errorMessage = field.parentNode.querySelector('.error-message');
         if (errorMessage) {
             errorMessage.remove();
@@ -1164,10 +1191,20 @@ class FormHandler {
     async handleSubmit(e) {
         e.preventDefault();
         const form = e.target;
+        // Temporarily disable required on hidden fields to avoid native validation errors
+        const hiddenRequired = [];
+        form.querySelectorAll('[required]').forEach((el) => {
+            if (!this.isElementVisible(el)) {
+                hiddenRequired.push(el);
+                el.removeAttribute('required');
+            }
+        });
         
         // Validate entire form
         if (!this.validateForm(form)) {
             Utils.showToast('Please correct the errors before submitting', 'error');
+            // Restore attributes
+            hiddenRequired.forEach((el) => el.setAttribute('required', ''));
             return;
         }
 
@@ -1194,11 +1231,15 @@ class FormHandler {
             // Restore button state
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
+            // Restore attributes
+            hiddenRequired.forEach((el) => el.setAttribute('required', ''));
         }
     }
 
     validateForm(form) {
-        const requiredFields = form.querySelectorAll('[required]');
+        // Validate only visible required fields
+        const requiredFields = Array.from(form.querySelectorAll('[required]'))
+            .filter((el) => this.isElementVisible(el));
         let isValid = true;
 
         requiredFields.forEach(field => {
@@ -1222,6 +1263,12 @@ class FormHandler {
                 }
             }, 2000);
         });
+    }
+
+    isElementVisible(el) {
+        if (!el) return false;
+        const rects = el.getClientRects();
+        return !!(el.offsetParent !== null || rects.length);
     }
 
     async handleNewsletterSubmit(form) {

@@ -9,23 +9,30 @@ include 'includes/header.php';
     <!-- Contact Hero Section -->
     <section class="contact-hero">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h1 class="page-title">Get in <span class="text-accent">Touch</span> with Our Experts</h1>
-                    <p class="hero-subtitle">Whether you need course guidance, career advice, or technical support, our team is here to help you succeed</p>
-                    <div class="hero-features">
-                        <div class="feature">
-                            <i class="fas fa-clock"></i>
-                            <span>24/7 Support Available</span>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="contact-hero-content">
+                        <h1 class="page-title">Get in <span class="text-accent">Touch</span> with Our Experts</h1>
+                        <p class="hero-subtitle">Whether you need course guidance, career advice, or technical support, our team is here to help you succeed</p>
+                        <div class="hero-features">
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>24/7 Support Available</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-phone"></i>
+                                <span>Free Consultation</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-reply"></i>
+                                <span>Quick Response Time</span>
+                            </div>
                         </div>
-                        <div class="feature">
-                            <i class="fas fa-phone"></i>
-                            <span>Free Consultation</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-reply"></i>
-                            <span>Quick Response Time</span>
-                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-hero-image">
+                        <img src="images/contact-hero.webp" alt="Contact support illustration" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -62,7 +69,7 @@ include 'includes/header.php';
                             </ul>
                         </div>
                         <div class="option-cta">
-                            <a href="#consultation-form" class="btn btn-primary">Schedule Free Consultation</a>
+                          
                             <p class="response-time">Response within 2 hours</p>
                         </div>
                     </div>
@@ -84,7 +91,7 @@ include 'includes/header.php';
                             </ul>
                         </div>
                         <div class="option-cta">
-                            <a href="#career-form" class="btn btn-primary">Get Career Advice</a>
+                         
                             <p class="response-time">Response within 4 hours</p>
                         </div>
                     </div>
@@ -106,7 +113,7 @@ include 'includes/header.php';
                             </ul>
                         </div>
                         <div class="option-cta">
-                            <a href="#support-form" class="btn btn-primary">Get Technical Help</a>
+                           
                             <p class="response-time">Response within 1 hour</p>
                         </div>
                     </div>
@@ -128,7 +135,7 @@ include 'includes/header.php';
                             </ul>
                         </div>
                         <div class="option-cta">
-                            <a href="#enterprise-form" class="btn btn-primary">Discuss Enterprise Needs</a>
+                          
                             <p class="response-time">Response within 24 hours</p>
                         </div>
                     </div>
@@ -150,7 +157,7 @@ include 'includes/header.php';
                             </ul>
                         </div>
                         <div class="option-cta">
-                            <a href="#partnership-form" class="btn btn-primary">Explore Partnerships</a>
+                            
                             <p class="response-time">Response within 48 hours</p>
                         </div>
                     </div>
@@ -172,7 +179,7 @@ include 'includes/header.php';
                             </ul>
                         </div>
                         <div class="option-cta">
-                            <a href="#general-form" class="btn btn-primary">Send General Inquiry</a>
+                         
                             <p class="response-time">Response within 12 hours</p>
                         </div>
                     </div>
@@ -186,7 +193,7 @@ include 'includes/header.php';
     </section>
 
     <!-- Contact Forms Section -->
-    <section class="contact-forms py-5">
+    <section id="consultation" class="contact-forms py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -247,7 +254,7 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             
-                            <div class="form-step" data-step="2">
+                            <div id="career" class="form-step" data-step="2">
                                 <h3>Tell us about yourself</h3>
                                 <div class="row g-3">
                                     <div class="col-md-6">
@@ -267,20 +274,6 @@ include 'includes/header.php';
                                         <input type="tel" class="form-control" id="phone" name="phone">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="country" class="form-label">Country</label>
-                                        <select class="form-select" id="country" name="country">
-                                            <option value="">Select Country</option>
-                                            <option value="US">United States</option>
-                                            <option value="CA">Canada</option>
-                                            <option value="UK">United Kingdom</option>
-                                            <option value="AU">Australia</option>
-                                            <option value="DE">Germany</option>
-                                            <option value="FR">France</option>
-                                            <option value="IN">India</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
                                         <label for="experience" class="form-label">Programming Experience</label>
                                         <select class="form-select" id="experience" name="experience">
                                             <option value="">Select Experience Level</option>
@@ -298,33 +291,12 @@ include 'includes/header.php';
                                 </div>
                             </div>
                             
-                            <div class="form-step" data-step="3">
+                            <div id="support" class="form-step" data-step="3">
                                 <h3>What would you like to know?</h3>
-                                <div class="mb-3">
-                                    <label for="subject" class="form-label">Subject *</label>
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Brief summary of your inquiry" required>
-                                </div>
+                              
                                 <div class="mb-3">
                                     <label for="message" class="form-label">Message *</label>
                                     <textarea class="form-control" id="message" name="message" rows="6" placeholder="Please provide details about your question or request..." required></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="preferredContact" class="form-label">Preferred Contact Method</label>
-                                    <select class="form-select" id="preferredContact" name="preferred_contact">
-                                        <option value="email">Email</option>
-                                        <option value="phone">Phone Call</option>
-                                        <option value="video">Video Call</option>
-                                        <option value="text">Text Message</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="urgency" class="form-label">How urgent is your inquiry?</label>
-                                    <select class="form-select" id="urgency" name="urgency">
-                                        <option value="low">Not urgent - within a week is fine</option>
-                                        <option value="medium">Moderately urgent - within 1-2 days</option>
-                                        <option value="high">Urgent - need response today</option>
-                                        <option value="critical">Critical - immediate response needed</option>
-                                    </select>
                                 </div>
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter" value="yes">
@@ -360,7 +332,7 @@ include 'includes/header.php';
                                 </div>
                                 <div class="info-content">
                                     <h4>Email Us</h4>
-                                    <p><a href="mailto:admin@skytroniclabs.com">admin@skytroniclabs.com</a></p>
+                                    <p>admin@skytroniclabs.com</p>
                                     <small>General inquiries and support</small>
                                 </div>
                             </div>
@@ -487,203 +459,6 @@ include 'includes/header.php';
         </div>
     </section>
 
-    <!-- Live Chat & Social -->
-    <section class="live-support py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="live-chat-info">
-                        <h2 class="section-title">Need Immediate Help?</h2>
-                        <p class="section-subtitle">Our support team is standing by to assist you</p>
-                        <div class="chat-features">
-                            <div class="chat-feature">
-                                <i class="fas fa-comments"></i>
-                                <div class="feature-content">
-                                    <h4>Live Chat Support</h4>
-                                    <p>Get instant answers to your questions with our live chat feature. Available during business hours with average response time under 2 minutes.</p>
-                                </div>
-                            </div>
-                            <div class="chat-feature">
-                                <i class="fas fa-video"></i>
-                                <div class="feature-content">
-                                    <h4>Video Consultations</h4>
-                                    <p>Schedule a free video call with our education consultants to discuss your career goals and find the perfect course for you.</p>
-                                </div>
-                            </div>
-                            <div class="chat-feature">
-                                <i class="fas fa-mobile-alt"></i>
-                                <div class="feature-content">
-                                    <h4>Mobile Support</h4>
-                                    <p>Access support on the go with our mobile-friendly chat system. Get help wherever you are, whenever you need it.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat-cta">
-                            <button id="startLiveChat" class="btn btn-primary btn-lg">
-                                <i class="fas fa-comment-dots"></i>
-                                Start Live Chat
-                            </button>
-                            <p class="chat-note">Usually responds in under 2 minutes during business hours</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="social-community">
-                        <h3>Join Our Community</h3>
-                        <p>Connect with fellow students, alumni, and instructors on our social platforms</p>
-                        <div class="social-platforms">
-                            <a href="#" class="social-platform">
-                                <div class="platform-icon">
-                                    <i class="fab fa-discord"></i>
-                                </div>
-                                <div class="platform-info">
-                                    <h4>Discord Community</h4>
-                                    <p>Join 15,000+ students in our active Discord server</p>
-                                    <span class="members">15,247 members</span>
-                                </div>
-                            </a>
-                            <a href="#" class="social-platform">
-                                <div class="platform-icon">
-                                    <i class="fab fa-linkedin"></i>
-                                </div>
-                                <div class="platform-info">
-                                    <h4>LinkedIn Network</h4>
-                                    <p>Connect with our professional alumni network</p>
-                                    <span class="members">8,932 professionals</span>
-                                </div>
-                            </a>
-                            <a href="#" class="social-platform">
-                                <div class="platform-icon">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                                <div class="platform-info">
-                                    <h4>GitHub Organization</h4>
-                                    <p>Access code repositories and collaborate on projects</p>
-                                    <span class="members">12,456 developers</span>
-                                </div>
-                            </a>
-                            <a href="#" class="social-platform">
-                                <div class="platform-icon">
-                                    <i class="fab fa-youtube"></i>
-                                </div>
-                                <div class="platform-info">
-                                    <h4>YouTube Channel</h4>
-                                    <p>Free tutorials, career advice, and tech talks</p>
-                                    <span class="members">89,234 subscribers</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-node"></div>
-        </div>
-    </section>
-
-    <!-- Office Locations (Virtual) -->
-    <section class="office-locations py-5">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="section-title">Our Global Presence</h2>
-                    <p class="section-subtitle">While we're a digital-first company, our team spans across multiple time zones to serve you better</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="office-card">
-                        <div class="office-flag">
-                            <img src="images/flag-us.webp" alt="United States">
-                        </div>
-                        <h4>United States</h4>
-                        <p class="office-location">San Francisco, CA</p>
-                        <p class="office-description">Headquarters & main operations</p>
-                        <div class="office-hours">
-                            <i class="fas fa-clock"></i>
-                            <span>PST: 9 AM - 6 PM</span>
-                        </div>
-                        <div class="office-team">
-                            <span>45 team members</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="office-card">
-                        <div class="office-flag">
-                            <img src="images/flag-uk.webp" alt="United Kingdom">
-                        </div>
-                        <h4>United Kingdom</h4>
-                        <p class="office-location">London, England</p>
-                        <p class="office-description">European operations & support</p>
-                        <div class="office-hours">
-                            <i class="fas fa-clock"></i>
-                            <span>GMT: 9 AM - 6 PM</span>
-                        </div>
-                        <div class="office-team">
-                            <span>23 team members</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="office-card">
-                        <div class="office-flag">
-                            <img src="images/flag-in.webp" alt="India">
-                        </div>
-                        <h4>India</h4>
-                        <p class="office-location">Bangalore, Karnataka</p>
-                        <p class="office-description">Development & technical support</p>
-                        <div class="office-hours">
-                            <i class="fas fa-clock"></i>
-                            <span>IST: 9 AM - 6 PM</span>
-                        </div>
-                        <div class="office-team">
-                            <span>67 team members</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="office-card">
-                        <div class="office-flag">
-                            <img src="images/flag-au.webp" alt="Australia">
-                        </div>
-                        <h4>Australia</h4>
-                        <p class="office-location">Sydney, NSW</p>
-                        <p class="office-description">Asia-Pacific operations</p>
-                        <div class="office-hours">
-                            <i class="fas fa-clock"></i>
-                            <span>AEST: 9 AM - 6 PM</span>
-                        </div>
-                        <div class="office-team">
-                            <span>18 team members</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="global-coverage mt-5">
-                <div class="coverage-stats">
-                    <div class="stat">
-                        <span class="number">24/7</span>
-                        <span class="label">Global Coverage</span>
-                    </div>
-                    <div class="stat">
-                        <span class="number">85+</span>
-                        <span class="label">Countries Served</span>
-                    </div>
-                    <div class="stat">
-                        <span class="number">153</span>
-                        <span class="label">Team Members</span>
-                    </div>
-                    <div class="stat">
-                        <span class="number">15</span>
-                        <span class="label">Languages Supported</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
 
 <?php include 'includes/footer.php'; ?>
